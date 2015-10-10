@@ -1,4 +1,4 @@
 #!/bin/bash
 
 vim/setup
-echo $PWD
+i3/setup
