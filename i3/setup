@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "$(dirname $0)"
+rm ~/.i3 -rf
+
+cp files ~/.i3 -R
+
