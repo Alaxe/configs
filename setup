@@ -1,4 +1,10 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+
+sudo pacman -Syu --noconfirm $(< packages.txt)
+
 vim/setup
 i3/setup
+mpd/setup
+ncmpcpp/setup

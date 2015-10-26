@@ -1,0 +1,5 @@
+vim 
+i3 
+ncmpcpp 
+git
+mpd 
