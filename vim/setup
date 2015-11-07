@@ -7,6 +7,7 @@ cp vimrc ~/.vimrc
 
 echo "Installing Pathogen"
 rm ~/.vim -rf
+cp vim ~/.vim -R
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 

@@ -35,6 +35,8 @@ set comments=sl:/*,mb:\ *,elx:\ */
 
 "Comment this line off if you're using a dark on black theme
 set background=dark
+
+source ~/.vim/cyrilic.vim
  
 " save a file
 nmap <F2> :w<CR>
