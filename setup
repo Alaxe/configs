@@ -4,7 +4,8 @@ cd "$(dirname "$0")"
 
 sudo pacman -Syu --noconfirm $(< packages.txt)
 
-vim/setup
+Xorg/setup
 i3/setup
+vim/setup
 mpd/setup
 ncmpcpp/setup

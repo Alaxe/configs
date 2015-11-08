@@ -1,3 +1,4 @@
+xorg-server
 vim 
 i3 
 ncmpcpp 
