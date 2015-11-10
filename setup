@@ -8,4 +8,5 @@ Xorg/setup
 i3/setup
 vim/setup
 mpd/setup
+terminator/setup
 ncmpcpp/setup

@@ -9,3 +9,4 @@ This is the software for which I have uploaded the configs
  * vim
  * i3
  * ncmpcpp + mpd(visualization)
+ * terminator - my terminal emulator of choice
