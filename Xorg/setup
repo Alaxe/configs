@@ -2,8 +2,7 @@
 
 cd $(dirname $0)
 
-mkdir -p /etc/X11/xinit/xinitrc.d/
-cp xinitrc.d/* /etc/X11/xinit/xinitrc.d/
+cp xinitrc ~/.xinitrc
 
 mkdir -p /etc/X11/xorg.conf.d/
 cp xorg.conf.d/* /etc/X11/xorg.conf.d/
