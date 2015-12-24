@@ -1,0 +1,7 @@
+[user]
+	email = aleks.tcr@gmail.com
+	name = Alexander Crustev
+[core]
+	editor = vim
+[push]
+	default = simple
