@@ -1,9 +1,9 @@
 #!/bin/sh
 
+mpd&
+
 exec i3
 
-exec xbindkeys
-exec mpd
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
