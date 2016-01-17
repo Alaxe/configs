@@ -1,6 +1,7 @@
 [global_config]
   title_transmit_bg_color = "#859900"
 [keybindings]
+  help = None
 [layouts]
   [[default]]
     [[[child1]]]
