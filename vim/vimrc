@@ -17,11 +17,11 @@ set nocompatible
 
 set autoindent
 set smartindent
-set noexpandtab
+set expandtab
 
 "I like my tabs wide
-set tabstop=8 
-set shiftwidth=8 
+set tabstop=4 
+set shiftwidth=4 
 
 set foldmethod=syntax
 
@@ -47,14 +47,14 @@ map <C-T> :tabnew <CR>
 map <C-C> :q <CR>
 
 "Compile a basic program
-autocmd Filetype cpp map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 && ./%:r <CR>
-autocmd Filetype java map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
-autocmd Filetype python map <F9> <ESC>:w <bar> !python % <CR>
+autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 && ./%:r <CR>
+autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
+autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
 
-"Use tabs of size 4 for html
-autocmd Filetype html       setlocal ts=4 sts=4 sw=4
-autocmd Filetype htmldjango setlocal ts=4 sts=4 sw=4
-
-autocmd Filetype markdown   setlocal ts=4 sts=4 sw=4 expandtab
+"Use tabs of size 8 for c/c++
+autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
+autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
 
 autocmd Filetype javascript map <F5> <ESC> :w <bar> :JSHint <CR> <CR>
+
+let g:airline#extensions#tabline#enabled = 1
