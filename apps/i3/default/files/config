@@ -5,7 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec xautolock -time 10 -locker ~/.i3/screenlock &
+exec xautolock -time 10 -locker ~/.i3/screenlock
 exec ~/.i3/fehbg
 
 # i3 config file (v4)

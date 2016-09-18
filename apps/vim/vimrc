@@ -5,9 +5,6 @@ execute pathogen#infect()
 "  - SimplyFold:       https://github.com/tmhedberg/SimpylFold
 "  - vim-sensible:     https://github.com/tpope/vim-sensible 
 "  - vim-javascript    https://github.com/pangloss/vim-javascript
-"  - vim-jshint2       https://github.com/Shutnik/jshint2.vim.git
-
-set secure exrc
 
 set enc=utf-8
 set fenc=utf-8
@@ -19,7 +16,6 @@ set autoindent
 set smartindent
 set expandtab
 
-"I like my tabs wide
 set tabstop=4 
 set shiftwidth=4 
 
@@ -35,8 +31,6 @@ set comments=sl:/*,mb:\ *,elx:\ */
 
 "Comment this line off if you're using a dark on black theme
 set background=dark
-
-source ~/.vim/cyrilic.vim
  
 " save a file
 nmap <F2> :w<CR>
@@ -47,14 +41,16 @@ map <C-T> :tabnew <CR>
 map <C-C> :q <CR>
 
 "Compile a basic program
-autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 && ./%:r <CR>
+autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 -fsanitize=address -Wall && ./%:r <CR>
 autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
 autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
+autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
+autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
 
 "Use tabs of size 8 for c/c++
 autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
 
-autocmd Filetype javascript map <F5> <ESC> :w <bar> :JSHint <CR> <CR>
-
 let g:airline#extensions#tabline#enabled = 1
+
+source ~/.vim/cyrilic.vim
