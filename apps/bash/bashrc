@@ -1,0 +1,2 @@
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] || keychain ~/.ssh/id_rsa -q;

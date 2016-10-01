@@ -5,3 +5,5 @@ ncmpcpp
 git
 mpd 
 terminator
+keychain
+bash
