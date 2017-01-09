@@ -20,8 +20,10 @@ if [ "$1" == "laptop" ]; then
     printf "Installing laptop-specific configs\n";
     sudo sh global/laptop/root.sh;
     sh global/laptop/user.sh;
-elif [ "$i" == "desktop" ]; then
+elif [ "$1" == "desktop" ]; then
     printf "Installing desktop-specific configs\n";
+    sudo sh global/desktop/root.sh
+    sh global/desktop/user.sh
 elif [ "$#" -eq "1" ]; then
     printf "Invalid platorm\n";
     printf "$help";

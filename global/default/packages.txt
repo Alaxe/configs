@@ -7,3 +7,9 @@ mpd
 terminator
 keychain
 bash
+xorg-xrandr
+chromium-browser
+node
+python3
+jre8-openjdk
+jdk8-openjdk
