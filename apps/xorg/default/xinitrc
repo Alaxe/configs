@@ -1,9 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-mpd&
+#mpd&
 
-exec i3
-
+#exec i3
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
