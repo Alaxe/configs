@@ -17,7 +17,11 @@ jdk8-openjdk
 ruby
 dmenu
 npm
-opensshd
+openssh
 thunar
 gvfs
 gvfs-mtp
+zip
+unzip
+mono
+xclip

@@ -40,8 +40,11 @@ map <C-N> :NERDTreeToggle <CR>
 map <C-T> :tabnew <CR>
 map <C-C> :q <CR>
 
+map <F5> <ESC> :w <bar> !xclip -selection clipboard < % <CR>
+
 "Compile a basic program
 autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 -fsanitize=address -Wall && ./%:r <CR>
+autocmd Filetype cs         map <F9> <ESC>:w <bar> !mcs % -out:%:r.exe && mono %:r.exe <CR>
 autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
 autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
 autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
