@@ -42,8 +42,10 @@ map <C-C> :q <CR>
 
 map <F5> <ESC> :w <bar> !xclip -selection clipboard < % <CR>
 
+map <F10> <ESC> :wa <bar> !make <CR>
+
 "Compile a basic program
-autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 -fsanitize=address -Wall && ./%:r <CR>
+autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 -fsanitize=address -DLOCAL -Wall -Wextra -Wpedantic && ./%:r <CR>
 autocmd Filetype cs         map <F9> <ESC>:w <bar> !mcs % -out:%:r.exe && mono %:r.exe <CR>
 autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
 autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
@@ -53,6 +55,7 @@ autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
 "Use tabs of size 8 for c/c++
 autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
+
 
 let g:airline#extensions#tabline#enabled = 1
 
