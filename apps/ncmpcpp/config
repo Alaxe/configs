@@ -4,7 +4,7 @@ visualizer_sync_interval = "30"
 visualizer_in_stereo = "yes"
 visualizer_type = "spectrum" (spectrum/wave)
 
-mpd_host = 192.168.0.201
+mpd_host = localhost
 
 user_interface = "alternative"
 mpd_music_dir = ~/Music
