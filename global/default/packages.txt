@@ -11,6 +11,7 @@ xorg-xrandr
 chromium
 nodejs
 python3
+smplayer
 feh
 jre8-openjdk
 jdk8-openjdk
@@ -25,4 +26,4 @@ zip
 unzip
 mono
 xclip
-tex-live
+texlive-most
