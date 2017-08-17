@@ -45,12 +45,14 @@ map <F5> <ESC> :w <bar> !xclip -selection clipboard < % <CR>
 map <F10> <ESC> :wa <bar> !make <CR>
 
 "Compile a basic program
-autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 -fsanitize=address -DLOCAL -Wall -Wextra -Wpedantic && ./%:r <CR>
+"map <F8> <ESC>:w <bar> !./compile_cpp.sh <CR>
+autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++11 -static -DLOCAL -Wall -Wextra -Wpedantic && ./%:r <CR>
 autocmd Filetype cs         map <F9> <ESC>:w <bar> !mcs % -out:%:r.exe && mono %:r.exe <CR>
 autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
 autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
 autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
 autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
+autocmd Filetype tex        map <F9> <ESC>:w <bar> !xelatex -interaction=nonstopmode -halt-on-error % <CR>
 
 "Use tabs of size 8 for c/c++
 autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab

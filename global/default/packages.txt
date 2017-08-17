@@ -25,3 +25,4 @@ zip
 unzip
 mono
 xclip
+tex-live
