@@ -1,6 +1,0 @@
-https://github.com/scrooloose/nerdtree
-https://github.com/tmhedberg/SimpylFold
-https://github.com/tpope/vim-sensible 
-https://github.com/pangloss/vim-javascript
-https://github.com/plasticboy/vim-markdown.git
-https://github.com/vim-airline/vim-airline

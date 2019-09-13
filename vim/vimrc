@@ -1,0 +1,76 @@
+execute pathogen#infect()
+" Pluigins:
+"  - Pathogen(loader): https://github.com/tpope/vim-pathogen
+"  - SimplyFold:       https://github.com/tmhedberg/SimpylFold
+"  - vim-sensible:     https://github.com/tpope/vim-sensible 
+"  - vim-javascript    https://github.com/pangloss/vim-javascript
+"  - vim-markdown      https://github.com/plasticboy/vim-markdown
+"  - vim-airline       https://github.com/vim-airline/vim-airline
+
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
+set nocompatible
+
+set autoindent
+set smartindent
+set expandtab
+
+set tabstop=4 
+set shiftwidth=4 
+
+set foldmethod=syntax
+
+set textwidth=80
+set t_Co=256
+syntax on
+
+set number
+set showmatch
+set comments=sl:/*,mb:\ *,elx:\ */
+
+"Comment this line off if you're using a dark on black theme
+set background=dark
+ 
+" save a file
+nmap <F2> :w<CR>
+imap <F2> <ESC>:w<CR>i
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
+map <C-N> :Vexplore <CR>
+map <C-T> :tabnew <CR>
+map <C-C> :q <CR>
+
+map <F5> <ESC>:w <bar> !xclip -selection clipboard < % <CR>
+map <F10> <ESC> :wa <bar> !make <CR>
+
+"Treat handlebars as html
+au BufReadPost *.hbs set syntax=html ts=2 sts=2 sw=2
+
+"Compile a basic program
+"map <F8> <ESC>:w <bar> !./compile_cpp.sh <CR>
+autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++14 -fsanitize=undefined -fsanitize=address -DLOCAL -Wall -Wextra -Wpedantic && ./%:r <CR>
+autocmd Filetype cs         map <F9> <ESC>:w <bar> !mcs % -out:%:r.exe && mono %:r.exe <CR>
+autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
+autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
+autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
+autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
+autocmd Filetype tex        map <F9> <ESC>:w <bar> !xelatex -interaction=nonstopmode -halt-on-error % <CR>
+
+"Use tabs of size 8 for c/c++
+autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
+autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
+autocmd Filetype html       setlocal ts=2 sts=2 sw=2
+autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
+
+
+let g:airline#extensions#tabline#enabled = 1
+
+
+source ~/.vim/cyrilic.vim
