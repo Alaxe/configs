@@ -1,5 +1,6 @@
 https://github.com/tmhedberg/SimpylFold
-https://github.com/tpope/vim-sensible 
+https://github.com/tpope/vim-sensible
 https://github.com/pangloss/vim-javascript
 https://github.com/plasticboy/vim-markdown
 https://github.com/vim-airline/vim-airline
+https://github.com/lervag/vimtex

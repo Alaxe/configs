@@ -1,7 +1,9 @@
 [user]
-	email = aleks.tcr@gmail.com
+	email = alexalex@mit.edu
 	name = Aleksandar Krastev
 [core]
 	editor = vim
 [push]
 	default = simple
+[alias]
+	lol = log --graph --oneline --decorate --color --all

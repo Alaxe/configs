@@ -1,11 +1,14 @@
 execute pathogen#infect()
 " Pluigins:
-"  - Pathogen(loader): https://github.com/tpope/vim-pathogen
+"  - Pathogen(loader)  https://github.com/tpope/vim-pathogen
 "  - SimplyFold:       https://github.com/tmhedberg/SimpylFold
-"  - vim-sensible:     https://github.com/tpope/vim-sensible 
+"  - vim-sensible      https://github.com/tpope/vim-sensible
 "  - vim-javascript    https://github.com/pangloss/vim-javascript
 "  - vim-markdown      https://github.com/plasticboy/vim-markdown
 "  - vim-airline       https://github.com/vim-airline/vim-airline
+"  - vimtex            https://github.com/lervag/vimtex
+filetype plugin on
+Helptags
 
 set enc=utf-8
 set fenc=utf-8
@@ -17,8 +20,8 @@ set autoindent
 set smartindent
 set expandtab
 
-set tabstop=4 
-set shiftwidth=4 
+set tabstop=4
+set shiftwidth=4
 
 set foldmethod=syntax
 
@@ -32,18 +35,19 @@ set comments=sl:/*,mb:\ *,elx:\ */
 
 "Comment this line off if you're using a dark on black theme
 set background=dark
- 
+
 " save a file
 nmap <F2> :w<CR>
 imap <F2> <ESC>:w<CR>i
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+let g:netrw_sort_sequence = "[\/]$,*,\.o$,\.swp$,\.bak$,\~$"
 
-map <C-N> :Vexplore <CR>
+map <C-N> :Explore <CR>
 map <C-T> :tabnew <CR>
 map <C-C> :q <CR>
 
@@ -54,11 +58,11 @@ map <F10> <ESC> :wa <bar> !make <CR>
 au BufReadPost *.hbs set syntax=html ts=2 sts=2 sw=2
 
 "Compile a basic program
-"map <F8> <ESC>:w <bar> !./compile_cpp.sh <CR>
 autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++14 -fsanitize=undefined -fsanitize=address -DLOCAL -Wall -Wextra -Wpedantic && ./%:r <CR>
 autocmd Filetype cs         map <F9> <ESC>:w <bar> !mcs % -out:%:r.exe && mono %:r.exe <CR>
 autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
 autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
+autocmd Filetype r          map <F9> <ESC>:w <bar> !Rscript % <CR>
 autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
 autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
 autocmd Filetype tex        map <F9> <ESC>:w <bar> !xelatex -interaction=nonstopmode -halt-on-error % <CR>
@@ -66,11 +70,25 @@ autocmd Filetype tex        map <F9> <ESC>:w <bar> !xelatex -interaction=nonstop
 "Use tabs of size 8 for c/c++
 autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
+"Use tabs in make files
+autocmd Filetype make       setlocal noexpandtab
+"Use 2-space indent in html and makrdown
 autocmd Filetype html       setlocal ts=2 sts=2 sw=2
 autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
+autocmd Filetype markdown   setlocal ts=2 sts=2 sw=2
 
+autocmd Filetype tex set nosmartindent
+autocmd Filetype markdown set nosmartindent
+
+let g:vimtex_fold_enabled=1
+let g:vimtex_indent_enabled=0
+let g:vimtex_imaps_leader=""
 
 let g:airline#extensions#tabline#enabled = 1
+set nojoinspaces
 
+highlight ExtraWhitespace ctermfg=white ctermbg=green
+match ExtraWhitespace /\s\+$/
+hi MatchParen ctermfg=white ctermbg=green
 
 source ~/.vim/cyrilic.vim
