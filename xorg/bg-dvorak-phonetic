@@ -105,7 +105,7 @@ xkb_symbols "dvp_phonetic" {
   key <AE10> {   [ bracketright,      6                   ]    };
   key <AE11> {   [ exclam,            8                   ]    };
   key <AE12> {   [ Cyrillic_shcha,    Cyrillic_SHCHA      ]    };
-  key <AD12> {   [ Cyrilic_sha,       Cyrilic_SHA         ]    };
+  key <AD12> {   [ Cyrillic_sha,      Cyrillic_SHA        ]    };
   key <AD01> {   [ semicolon,         colon               ]    };
   key <AB01> {   [ apostrophe,        quotedbl            ]    };
   key <AC11> {   [ minus,             emdash              ]    };
