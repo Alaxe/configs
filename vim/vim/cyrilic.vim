@@ -14,7 +14,7 @@ map зЦ zC
 map зР zR
 map зМ zM
 
-map ч `
+map ч $
 map я q
 map в w
 map е e
@@ -25,8 +25,8 @@ map у u
 map и i
 map о o
 map п p
-map ш [
-map щ ]
+map ш @
+map щ #
 
 map а a
 map с s
@@ -57,8 +57,8 @@ map У U
 map И I
 map О O
 map П P
-map Ш {
-map Щ }
+map Ш ^
+map Щ `
 
 map А A
 map С S
