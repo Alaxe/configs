@@ -1,0 +1,5 @@
+[Service]
+Type=simple
+User=alex
+ExecStart=
+ExecStart=/usr/bin/rclone sync /home/alex/Documents/ b2-backup:alexalex-mercury-backup/documents --fast-list --transfers 32 --progress
