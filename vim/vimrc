@@ -68,8 +68,8 @@ autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
 autocmd Filetype tex        map <F9> <ESC>:w <bar> !xelatex -interaction=nonstopmode -halt-on-error % <CR>
 
 "Use tabs of size 8 for c/c++
-autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
-autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
+autocmd Filetype cpp        setlocal ts=4 sts=4 sw=4 noexpandtab
+autocmd Filetype c          setlocal ts=4 sts=4 sw=4 noexpandtab
 "Use tabs in make files
 autocmd Filetype make       setlocal noexpandtab
 "Use 2-space indent in html and makrdown
@@ -82,7 +82,7 @@ autocmd Filetype markdown set nosmartindent
 
 let g:vimtex_fold_enabled=1
 let g:vimtex_indent_enabled=0
-let g:vimtex_imaps_leader=""
+let g:vimtex_imaps_leader="🤠"
 
 let g:airline#extensions#tabline#enabled = 1
 set nojoinspaces
@@ -90,5 +90,8 @@ set nojoinspaces
 highlight ExtraWhitespace ctermfg=white ctermbg=green
 match ExtraWhitespace /\s\+$/
 hi MatchParen ctermfg=white ctermbg=green
+set list
+set listchars=tab:▸\
+"set listchars=tab:▸\ ,eol:¬
 
 source ~/.vim/cyrilic.vim
