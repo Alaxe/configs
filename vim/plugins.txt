@@ -4,3 +4,4 @@ https://github.com/pangloss/vim-javascript
 https://github.com/plasticboy/vim-markdown
 https://github.com/vim-airline/vim-airline
 https://github.com/lervag/vimtex
+https://github.com/Konfekt/FastFold
