@@ -33,19 +33,11 @@ set number
 set showmatch
 set comments=sl:/*,mb:\ *,elx:\ */
 
-"Comment this line off if you're using a dark on black theme
 set background=dark
 
 " save a file
 nmap <F2> :w<CR>
 imap <F2> <ESC>:w<CR>i
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 0
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-let g:netrw_sort_sequence = "[\/]$,*,\.o$,\.swp$,\.bak$,\~$"
 
 map <C-N> :Explore <CR>
 map <C-T> :tabnew <CR>
@@ -54,34 +46,12 @@ map <C-C> :q <CR>
 map <F5> <ESC>:w <bar> !xclip -selection clipboard < % <CR>
 map <F10> <ESC> :wa <bar> !make <CR>
 
-"Treat handlebars as html
-autocmd BufNewFile,bufRead *.hbs set ft=html
-autocmd BufNewFile,BufRead *.bsv set ft=bsv
-autocmd BufNewFile,BufRead *.ms set ft=bsv
-let b:verilog_indent_modules = 1
-
-"Compile a basic program
-autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++14 -fsanitize=undefined -fsanitize=address -DLOCAL -Wall -Wextra -Wpedantic && ./%:r <CR>
-autocmd Filetype cs         map <F9> <ESC>:w <bar> !mcs % -out:%:r.exe && mono %:r.exe <CR>
-autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
-autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
-autocmd Filetype r          map <F9> <ESC>:w <bar> !Rscript % <CR>
-autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
-autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
-autocmd Filetype tex        map <F9> <ESC>:w <bar> !xelatex -interaction=nonstopmode -halt-on-error % <CR>
-
-"Use tabs of size 8 for c/c++
-"autocmd Filetype cpp        setlocal ts=8 sts=8 sw=8 noexpandtab
-"autocmd Filetype c          setlocal ts=8 sts=8 sw=8 noexpandtab
-"Use tabs in make files
-autocmd Filetype make       setlocal noexpandtab
-"Use 2-space indent in html and makrdown
-autocmd Filetype html       setlocal ts=2 sts=2 sw=2
-autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
-autocmd Filetype markdown   setlocal ts=2 sts=2 sw=2
-
-autocmd Filetype tex set nosmartindent
-autocmd Filetype markdown set nosmartindent
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 0
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+let g:netrw_sort_sequence = "[\/]$,*,\.o$,\.swp$,\.bak$,\~$"
 
 let g:vimtex_fold_enabled=1
 let g:vimtex_indent_enabled=0
@@ -96,6 +66,40 @@ hi MatchParen ctermfg=white ctermbg=green
 
 set list
 set listchars=tab:▸\
-"set listchars=tab:▸\ ,eol:¬
+
+autocmd BufNewFile,BufRead *.bsv set ft=bsv
+autocmd BufNewFile,BufRead *.ms  set ft=bsv
+autocmd BufNewFile,BufRead *.hbs set ft=html
+autocmd BufNewFile,BufRead *.m   set ft=html
+
+
+"Compile a basic program
+autocmd Filetype cpp        map <F9> <ESC>:w <bar> !g++ % -o %:r -std=c++14 -fsanitize=undefined -fsanitize=address -DLOCAL -Wall -Wextra -Wpedantic && ./%:r <CR>
+autocmd Filetype cs         map <F9> <ESC>:w <bar> !mcs % -out:%:r.exe && mono %:r.exe <CR>
+autocmd Filetype go         map <F9> <ESC>:w <bar> !go run % <CR>
+autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
+autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
+autocmd Filetype r          map <F9> <ESC>:w <bar> !Rscript % <CR>
+autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
+autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
+autocmd Filetype tex        map <F9> <ESC>:w <bar> !xelatex -interaction=nonstopmode -halt-on-error % <CR>
+
+"Use tabs
+autocmd Filetype make       setlocal noexpandtab nolist
+autocmd Filetype go         setlocal noexpandtab nolist
+autocmd Filetype go         map <F4> <ESC>:w <bar> !gofmt -w % <CR>
+
+"Minispec
+autocmd FileType bsv set textwidth=100
+let b:verilog_indent_modules = 1
+
+"Use 2-space indent in html and makrdown
+autocmd Filetype html       setlocal ts=2 sts=2 sw=2
+autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
+autocmd Filetype markdown   setlocal ts=2 sts=2 sw=2
+
+
+autocmd Filetype tex        set nosmartindent
+autocmd Filetype markdown   set nosmartindent
 
 source ~/.vim/cyrilic.vim
