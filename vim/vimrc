@@ -70,7 +70,7 @@ set listchars=tab:▸\
 autocmd BufNewFile,BufRead *.bsv set ft=bsv
 autocmd BufNewFile,BufRead *.ms  set ft=bsv
 autocmd BufNewFile,BufRead *.hbs set ft=html
-autocmd BufNewFile,BufRead *.m   set ft=html
+autocmd BufNewFile,BufRead *.m   set ft=murphi
 
 
 "Compile a basic program
