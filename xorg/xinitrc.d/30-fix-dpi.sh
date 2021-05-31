@@ -1,15 +1,17 @@
 #!/bin/bash
 
-# This script queries xrandr and if there is a single monitor connected to the
-# computer (the built in screen in my laptop) sets the dpi to 144
-#
-# It's meant to be executed in .i3/config
 
+# Test whether there is a monitor connected
 xrandr --listmonitors | grep 'Monitors: 1' &> /dev/null;
 
 if [ $? == 0 ]; then
-    #echo "hello there";
+    # Only laptop screen, use 144 dpi
+    echo 'Xft.dpi: 144' | xrdb -merge;
+else
+    # External monitor connected
+    # Use mirrored 4K 144 dpi
+    xrandr --fb "3840x2160";
+    xrandr --output DP1 --mode "3840x2160";
+    xrandr --output eDP1 --scale-from "3840x2160";
     echo 'Xft.dpi: 144' | xrdb -merge;
 fi
-
-
