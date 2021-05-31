@@ -235,6 +235,8 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+exec --no-startup-id "~/.i3/scale-screenlock"
+
 # Lock screen
 bindsym $mod+Shift+o exec --no-startup-id ~/.i3/screenlock
 
@@ -244,7 +246,7 @@ exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
- exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 # exec --no-startup-id xautolock -time 10 -locker ~/.i3/screenlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
