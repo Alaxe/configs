@@ -18,8 +18,8 @@ pluginList=$(cat plugins.txt)
 cd ~/.vim/bundle/
 for plugin in $pluginList;
 do
-	echo " -  $plugin"
-	git clone $plugin -q
+    echo " -  $plugin"
+    git clone $plugin -q
 done
 
 echo "Vim has been set up successfully"
