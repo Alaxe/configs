@@ -47,8 +47,10 @@ bindsym $mod+Ctrl+m exec pavucontrol
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"; exec "notify-send -t 500 \\"$(xbacklight)\\""
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"; exec "notify-send -t 500 \\"$(xbacklight)\\""
+
+bindsym XF86TouchpadToggle exec --no-startup-id "~/.i3/toggle-touchpad.sh"
 
 # Start Applications
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -235,10 +237,11 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-exec --no-startup-id "~/.i3/scale-screenlock"
+exec --no-startup-id " ~/.i3/scale-screenlock.sh"
 
 # Lock screen
-bindsym $mod+Shift+o exec --no-startup-id ~/.i3/screenlock
+bindsym $mod+Shift+o exec --no-startup-id "i3lock --image ~/.i3/images/lockscreen-scaled.png"
+
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
