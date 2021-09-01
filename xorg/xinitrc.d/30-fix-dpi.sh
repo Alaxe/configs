@@ -10,10 +10,8 @@ if [ $? == 0 ]; then
     export DPI_SCALE_FACTOR=1.5
 else
     # External monitor connected
-    # Use mirrored 4K 144 dpi
-    xrandr --fb "3840x2160";
-    xrandr --output DP1 --mode "3840x2160";
-    xrandr --output eDP1 --scale-from "3840x2160";
-    echo 'Xft.dpi: 144' | xrdb -merge;
-    export DPI_SCALE_FACTOR=1.5
+    # Use mirrored 1080p
+    xrandr --output eDP-1 --mode "1920x1080" --pos "0x0";
+    xrandr --output DP-1 --same-as eDP-1;
+    xrandr --fb "1920x1080";
 fi
