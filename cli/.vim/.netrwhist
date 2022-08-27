@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/alex/.dots/xorg/xinitrc.d'
+let g:netrw_dirhist_5='/home/alex/.configs'
+let g:netrw_dirhist_4='/home/alex/.config'
+let g:netrw_dirhist_3='/home/alex/Documents/configs/xorg/xinitrc.d'
+let g:netrw_dirhist_2='/home/alex/xinitrc.d'
+let g:netrw_dirhist_1='/home/alex'
+let g:netrw_dirhist_0='/home/alex/xinitrc.d'
+let g:netrw_dirhist_9='/home/alex'
+let g:netrw_dirhist_8='/home/alex/Videos'
+let g:netrw_dirhist_7='/home/alex'
