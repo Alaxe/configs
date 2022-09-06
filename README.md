@@ -19,3 +19,8 @@ configs](https://github.com/nikolavp/configs).
 ```bash
 sudo bash -c "cat bg-dvorak-phonetic >> /usr/share/X11/xkb/symbols/bg"
 ```
+
+```bash
+sudo cmod a+x ~
+sudo stow  root/ -t /
+```
