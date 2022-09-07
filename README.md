@@ -1,26 +1,39 @@
-# About
-This is the repository with some of my linux configuration files and some helper
-scripts.
+All configs are managed through [GNU Stow][stow].
 
-## Included configurations
- * i3wm
- * X11
- * vim
- * ncmpcpp
- * mpd
- * git
+Since this repo uses submodules, after cloning run
+```bash
+git submodule update --init --recursive
+```
 
-## Dvorak phonetic
-I've used (and modified) a bulgarian version of dvorak *bg-dvorak-phonetic* and
-cyrilic mappings for vim created by @nikolavp. Feel free to check out [his
-configs](https://github.com/nikolavp/configs).
+## User-Level configs
+* Shared configs
+```bash
+stow -t ~ --restow cli
+```
+* Just for laptop
+```bash
+stow -t ~ --restow laptop
+```
+* Just for Sanchez cluster
+```bash
+stow -t ~ --restow sanchez
+```
 
-## Root stows
+## Root-level configs
+```bash
+sudo stow -t / --restow root/
+```
+To users to follow the symlinks created by Stow, they need execute permissions
+on all parent directories. In my case, this required
+```bash
+chmod a+x ~
+```
+
+I'm using a modified verison of Bulgarian Dvorak from [nikolavp/configs].
+Installing it requires running
 ```bash
 sudo bash -c "cat bg-dvorak-phonetic >> /usr/share/X11/xkb/symbols/bg"
 ```
 
-```bash
-sudo cmod a+x ~
-sudo stow  root/ -t /
-```
+[stow]: https://www.gnu.org/software/stow/
+[nikolavp/configs]: https://github.com/nikolavp/configs
