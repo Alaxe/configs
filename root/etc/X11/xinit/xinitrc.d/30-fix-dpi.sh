@@ -1,9 +1,9 @@
 #!/bin/bash
 
-xrandr --listmonitors | grep 'HDMI-2' &> /dev/null;
+xrandr --listmonitors | grep ' HDMI-2' &> /dev/null;
 hdmi=$?
 
-xrandr --listmonitors | grep 'Monitors: 2' &> /dev/null;
+xrandr --listmonitors | grep ' DP-1' &> /dev/null;
 dp=$?
 
 if [ $hdmi == 0 ]; then
