@@ -114,5 +114,5 @@ autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
 autocmd Filetype tex        map <F9> <ESC>:w <bar>
     \ !xelatex -interaction=nonstopmode -halt-on-error % <CR>
 
-autocmd Filetype go         map <F4> <ESC>:w <bar> !gofmt -w % <CR>
+autocmd Filetype go         map <F6> <ESC>:w <bar> !gofmt -w % <CR>
 
