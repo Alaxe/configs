@@ -5,6 +5,7 @@ alias rm="rm -i"
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias mosh='mosh --experimental-remote-ip=remote'
+alias kinit="kinit alexalex@CSAIL.MIT.EDU"
 
 
 set -o vi
