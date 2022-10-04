@@ -1,27 +1,3 @@
-[submodule "vim/.vim/vim-pathogen"]
-	path = vim/.vim/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen
-[submodule "vim/.vim/bundle/FastFold"]
-	path = vim/.vim/bundle/FastFold
-	url = https://github.com/Konfekt/FastFold
-[submodule "vim/.vim/bundle/SimpylFold"]
-	path = vim/.vim/bundle/SimpylFold
-	url = https://github.com/tmhedberg/SimpylFold
-[submodule "vim/.vim/bundle/vim-airline"]
-	path = vim/.vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
-[submodule "vim/.vim/bundle/vim-javascript"]
-	path = vim/.vim/bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
-[submodule "vim/.vim/bundle/vim-markdown"]
-	path = vim/.vim/bundle/vim-markdown
-	url = https://github.com/preservim/vim-markdown
-[submodule "vim/.vim/bundle/vim-sensible"]
-	path = vim/.vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible
-[submodule "vim/.vim/bundle/vimtex"]
-	path = vim/.vim/bundle/vimtex
-	url = https://github.com/lervag/vimtex
 [submodule "cli/.vim/vim-pathogen"]
 	path = cli/.vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
