@@ -7,3 +7,5 @@
 	default = simple
 [alias]
 	lol = log --graph --oneline --decorate --color --all
+[init]
+	defaultBranch = main
