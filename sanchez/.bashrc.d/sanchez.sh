@@ -18,6 +18,6 @@ export GOPATH="/data/scratch/alexalex/.go"
 
 alias jenv="source ~/data-scratch/jenv/bin/activate"
 
-export PROMPT_DIRTRIM=2
-export PS1="@\h: \w\$ "
-export PS1="\[\033[01;32m\][@\h\[\033[01;37m\] \w\[\033[01;32m\]]\$\[\033[00m\] "
+# export PROMPT_DIRTRIM=2
+# export PS1="@\h: \w\$ "
+# export PS1="\[\033[01;32m\][@\h\[\033[01;37m\] \w\[\033[01;32m\]]\$\[\033[00m\] "

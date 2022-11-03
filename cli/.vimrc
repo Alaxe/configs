@@ -110,7 +110,7 @@ autocmd Filetype java       map <F9> <ESC>:w <bar> !javac % && java %:r <CR>
 autocmd Filetype javascript map <F9> <ESC>:w <bar> !node % <CR>
 autocmd Filetype python     map <F9> <ESC>:w <bar> !python % <CR>
 autocmd Filetype r          map <F9> <ESC>:w <bar> !Rscript % <CR>
-autocmd Filetype sh         map <F9> <ESC>:w <bar> !sh % <CR>
+autocmd Filetype sh         map <F9> <ESC>:w <bar> !bash % <CR>
 autocmd Filetype tex        map <F9> <ESC>:w <bar>
     \ !xelatex -interaction=nonstopmode -halt-on-error % <CR>
 
