@@ -23,7 +23,7 @@ stow -t ~ --restow sanchez
 ```bash
 sudo stow -t / --restow root/
 ```
-To users to follow the symlinks created by Stow, they need execute permissions
+To let other users follow the symlinks created by Stow, they need execute permissions
 on all parent directories. In my case, this required
 ```bash
 chmod a+x ~
