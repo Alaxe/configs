@@ -15,6 +15,7 @@ source /afs/csail.mit.edu/system/common/etc/zsh/zprofile.csail
 #source /data/sanchez/tools/nsamar/18.04/paths-vagrant.sh
 export PATH="/afs/csail.mit.edu/u/a/alexalex/.local/bin:$PATH"
 export GOPATH="/data/scratch/alexalex/.go"
+export GOCACHE="/data/scratch/alexalex/.cache/go"
 
 alias jenv="source ~/data-scratch/jenv/bin/activate"
 

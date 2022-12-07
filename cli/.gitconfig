@@ -9,3 +9,5 @@
 	lol = log --graph --oneline --decorate --color --all
 [init]
 	defaultBranch = main
+[pul]
+	ff = only
