@@ -1,0 +1,104 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+use File::Spec::Functions;
+use File::Temp;
+use FindBin;
+
+my $SERVER = catfile($FindBin::Bin, 'mosh-server.real');
+my $SHELL = catfile($FindBin::Bin, 'mosh-session');
+
+sub check_max_logins {
+    open LIMITS, '<', '/etc/security/limits.conf' or return;
+    my $max;
+    while (<LIMITS>) {
+        $max = $1 if m/
+            ^ \s* \* \s* hard \s* maxlogins \s* (\d+) \s* $
+        /x;
+    }
+    close LIMITS;
+    defined $max or return;
+    open W, '-|', 'w', '-hs', '--', $ENV{'USER'} or return;
+    my $cur = 0;
+    $cur++ while (<W>);
+    close W;
+    $cur >= $max - 1 and $cur >= 3 or return;
+
+    print STDERR <<EOF;
+$0: error: too many logins.
+
+Hey!  I know it isn't really any of my business, but I couldn't help
+but notice that you are logged in to this server $cur times out of a
+maximum $max.  To stop you from using up all of your simultaneous
+logins and locking yourself out of this server entirely, I'm going to
+exit.  You can thank me later.
+
+RIGHT NOW:
+You should log in to this server with ssh.  Then you should clean up
+your disconnected mosh-server processes to reduce your login count.
+If all of your mosh sessions are disconnected, you can do this with:
+  pkill -u $ENV{'USER'} mosh-server
+You will then be able to safely continue using mosh.
+
+IN THE FUTURE:
+If you are using screen or tmux inside mosh, the easiest way to avoid
+this problem is to attach your screen or tmux directly from the mosh
+command line with -d:
+  mosh HOSTNAME -- screen -dr
+  mosh HOSTNAME -- tmux attach -d
+Then when you reattach from another session, the previous screen or
+tmux client will exit, and because there's no shell between it and the
+corresponding mosh-server, the mosh-server will exit too.
+
+Have a nice day!
+
+$0: exiting.
+EOF
+    exit -1;
+}
+
+check_max_logins;
+
+sub finish {
+    if ( not grep { $_ eq "--" } @ARGV ) {
+      push @ARGV, '--', $SHELL;
+    }
+
+    $ENV{ 'MOSH_SERVER_NETWORK_TMOUT' } = q{1209600}; # 14-day timeout per 2/15/2017 jweiss request
+
+    exec 'pagsh', '-c', 'aklog; exec "$@"', '--', $SERVER, @ARGV;
+    die;
+}
+
+if ( not defined $ENV{ 'KRB5CCNAME' } ) {
+  $ENV{ 'KRB5CCNAME' } = 'FILE:/tmp/krb5cc_' . $>;
+}
+
+my $filename;
+
+if ( $ENV{ 'KRB5CCNAME' } =~ m{^FILE:(.*)} ) {
+  $filename = $1;
+} else {
+  finish;
+}
+
+# Read ticket credentials
+my $credentials;
+{
+  open CREDENTIALS, $filename or finish;
+  local $/ = undef;
+  $credentials = <CREDENTIALS>;
+  close CREDENTIALS or die;
+}
+
+# Write it to a temp file
+File::Temp->safe_level( File::Temp::HIGH );
+my $new_credentials = File::Temp->new( UNLINK => 0,
+				       TEMPLATE => '/tmp/krb5cc-mosh_' . $> . '_XXXXXX' );
+my $new_filename = $new_credentials->filename;
+print $new_credentials $credentials or die "print: $!\n";
+close $new_credentials or die "close: $!\n";
+
+$ENV{ 'KRB5CCNAME' } = 'FILE:' . $new_filename;
+finish;
