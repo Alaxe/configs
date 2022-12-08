@@ -6,9 +6,10 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 
 set -o vi
-export EDITOR=vim
+export EDITOR=nvim
+alias vim=nvim
 
-alias kinit="kinit -f alexalex@CSAIL.MIT.EDU"
+alias zinit="kinit -f alexalex@CSAIL.MIT.EDU"
 zssh() {
     mosh --server="~/.local/bin/mosh-server-kerberos" $1.csail.mit.edu
 }
