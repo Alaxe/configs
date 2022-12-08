@@ -9,8 +9,9 @@ set -o vi
 export EDITOR=nvim
 alias vim=nvim
 
-alias zinit="kinit -f alexalex@CSAIL.MIT.EDU"
+alias zinit="kinit -R -f alexalex@CSAIL.MIT.EDU"
 zssh() {
+    zinit
     mosh --server="~/.local/bin/mosh-server-kerberos" $1.csail.mit.edu
 }
 
