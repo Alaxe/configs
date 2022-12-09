@@ -19,3 +19,6 @@
 [submodule "cli/.vim/bundle/vim-javascript"]
 	path = cli/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "cli/.local/share/nvim/vim-plug"]
+	path = cli/.local/share/nvim/vim-plug
+	url = https://github.com/junegunn/vim-plug
