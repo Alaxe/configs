@@ -1,6 +1,6 @@
 All configs are managed through [GNU Stow][stow].
 
-Since this repo uses submodules, after cloning run
+Since this repo uses submodules, after cloning it run
 ```bash
 git submodule update --init --recursive
 ```
@@ -23,8 +23,9 @@ stow -t ~ --restow sanchez
 ```bash
 sudo stow -t / --restow root/
 ```
-To let other users follow the symlinks created by Stow, they need execute permissions
-on all parent directories. In my case, this required
+To let other users follow the symlinks created by Stow, they need execute
+permissions on all parent directories.
+In my case, this required
 ```bash
 chmod a+x ~
 ```
