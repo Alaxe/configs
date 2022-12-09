@@ -38,25 +38,8 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 25
 let g:netrw_sort_sequence = "[\/]$,*,\.o$,\.swp$,\.bak$,\~$"
 
-" let g:vimtex_fold_enabled=1
-" let g:vimtex_indent_enabled=0
-" let g:vimtex_imaps_leader="🤠"
-" let g:tex_flavor="latex"
-
-" let g:airline#extensions#tabline#enabled = 1
-
-" highlight ExtraWhitespace ctermfg=white ctermbg=green
-" match ExtraWhitespace /\s\+$/
-" hi MatchParen ctermfg=white ctermbg=green
-
-" set list
-" set listchars=tab:▸\
-
 source ~/.vim/cyrilic.vim
 
-" let g:indentLine_setConceal=0
-" set conceallevel=0
-"
 autocmd BufNewFile,BufRead */janncy/**.\(cc\|h\) setlocal ts=2 sts=2 sw=2
 
 autocmd BufNewFile,BufRead *.bsv set ft=bsv
