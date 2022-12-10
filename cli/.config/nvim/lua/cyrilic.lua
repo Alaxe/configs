@@ -1,8 +1,9 @@
+-- From: https://github.com/nikolavp/configs/blob/master/vim/cyrillic.vim
+vim.api.nvim_exec([[
 " cyrillic mappings, because I'm thoroughly annoyed by switching all the time
 " and keymap switching confuses me.
 "
 " Inspired by Borko, update from vpetkov's vimrc
-
 map гх gh
 map гй gj
 map гк gk
@@ -77,3 +78,4 @@ map Ж V
 map Б B
 map Н N
 map М M
+]], false)

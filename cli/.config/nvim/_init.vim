@@ -38,7 +38,7 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 25
 let g:netrw_sort_sequence = "[\/]$,*,\.o$,\.swp$,\.bak$,\~$"
 
-source ~/.vim/cyrilic.vim
+" source ~/.vim/cyrilic.vim
 
 autocmd BufNewFile,BufRead */janncy/**.\(cc\|h\) setlocal ts=2 sts=2 sw=2
 
@@ -258,6 +258,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 lua << END
+require("cyrilic")
 local function getWords()
   if vim.bo.filetype == "md" or vim.bo.filetype == "txt" or vim.bo.filetype == "markdown" or vim.bo.filetype == "tex" then
     if not (vim.fn.wordcount().visual_words == nil) then
@@ -269,32 +270,34 @@ local function getWords()
     return ""
   end
 end
-require('lualine').setup{
-    options = {
-        icons_enabled = true,
-        theme = 'powerline',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
-        disabled_filetypes = {
-            statusline = {},
-            winbar = {},
+pcall(function()
+    require('lualine').setup{
+        options = {
+            icons_enabled = true,
+            theme = 'powerline',
+            component_separators = { left = '', right = ''},
+            section_separators = { left = '', right = ''},
+            disabled_filetypes = {
+                statusline = {},
+                winbar = {},
+            },
+            ignore_focus = {},
+            always_divide_middle = true,
+            globalstatus = false,
+            refresh = {
+                statusline = 1000,
+                tabline = 1000,
+                winbar = 1000,
+            }
         },
-        ignore_focus = {},
-        always_divide_middle = true,
-        globalstatus = false,
-        refresh = {
-            statusline = 1000,
-            tabline = 1000,
-            winbar = 1000,
-        }
-    },
-    sections = {
-        lualine_a = {'mode'},
-        lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'filetype'},
-        lualine_y = {{getWords}, 'progress'},
-        lualine_z = {'location'}
-    },
-}
+        sections = {
+            lualine_a = {'mode'},
+            lualine_b = {},
+            lualine_c = {'filename'},
+            lualine_x = {'filetype'},
+            lualine_y = {{getWords}, 'progress'},
+            lualine_z = {'location'}
+        },
+    }
+end)
 END

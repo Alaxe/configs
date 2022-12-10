@@ -60,7 +60,7 @@ hi MatchParen ctermfg=white ctermbg=green
 set list
 set listchars=tab:▸\
 
-source ~/.vim/cyrilic.vim
+"source ~/.vim/cyrilic.vim
 
 let g:indentLine_setConceal=0
 set conceallevel=0
