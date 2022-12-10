@@ -39,7 +39,7 @@ sudo bash -c "cat bg-dvorak-phonetic >> /usr/share/X11/xkb/symbols/bg"
 ## Neovim
 This is in flux.
 
-You need to run `:PlugInstall` to install all the vim plugins.
+You need to run `:PaqSync` to install all the vim plugins.
 
 You need to run things with coc manually to install autocompletes.
 
