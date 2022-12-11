@@ -7,7 +7,10 @@ require "paq" {
     {'neoclide/coc.nvim', branch = 'release'},
 }
 
-vim.g.coc_global_extensions = {'coc-json'}
+vim.g.coc_global_extensions = {
+    'coc-json',
+    'coc-pyright',
+}
 
 -- General options
 
