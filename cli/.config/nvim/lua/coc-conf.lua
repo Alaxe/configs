@@ -1,3 +1,7 @@
+vim.cmd("CocEnable")
+
+vim.o.updatetime = 300
+
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"text", "markdown", "tex", 'gitcommit'},
     callback = function() vim.b.coc_suggest_disable = true; end
