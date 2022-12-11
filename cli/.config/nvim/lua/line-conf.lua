@@ -13,6 +13,7 @@ local function getWords()
         return ""
     end
 end
+
 require('lualine').setup{
     options = {
         icons_enabled = true,

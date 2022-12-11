@@ -122,5 +122,9 @@ vim.keymap.set("", "<F9>", buildCurrent)
 
 -- Plugin configuration
 
-pcall(require, "line-conf")
-pcall(require, "coc-conf")
+if pcall(require, 'lualine') then
+    require 'line-conf'
+end
+if pcall(require, 'coc.highlight') then
+    require "coc-conf"
+end

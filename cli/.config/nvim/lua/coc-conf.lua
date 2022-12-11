@@ -1,4 +1,4 @@
-vim.cmd("CocEnable")
+require 'coc.highlight'
 
 vim.o.updatetime = 300
 
