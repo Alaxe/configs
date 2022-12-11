@@ -81,10 +81,10 @@ vim.api.nvim_create_autocmd("Filetype", {
     callback = function() vim.go.textwidth = 100; end
 })
 
---[[
-autocmd FileType markdown   let b:coc_suggest_disable=1
-autocmd FileType text   let b:coc_suggest_disable=1
---]]
+vim.api.nvim_create_autocmd("Filetype", {
+    pattern = {"text", "markdown", "tex", 'gitcommit'},
+    callback = function() vim.b.coc_suggest_disable = true; end
+})
 
 vim.b.verilog_indent_modules = 1
 
@@ -172,15 +172,8 @@ pcall(function()
     }
 end)
 
----- Coc ----
-
+---- CoC ----
 vim.opt.signcolumn = "number"
-
-vim.api.nvim_create_autocmd("Filetype", {
-    pattern = {"text", "markdown", "tex"},
-    callback = function() vim.bo.coc_suggest_disable = true; end
-})
-
 
 local keyset = vim.keymap.set
 -- Auto complete
@@ -350,4 +343,3 @@ keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
 keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list.
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
-
