@@ -8,6 +8,9 @@ alias free='free -m'                      # show sizes in MB
 set -o vi
 export EDITOR=nvim
 alias vim=nvim
+
+# `--experimental-remote-ip=remote` is necessary for connecting to CSAIL from
+# outside of MIT.
 alias mosh='mosh --experimental-remote-ip=remote'
 
 zinit() {

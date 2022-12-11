@@ -41,6 +41,9 @@ This is in flux.
 
 You need to run `:PaqSync` to install all the vim plugins.
 
+```bash
+nvim +PaqSync +qall
+```
 You need to run things with coc manually to install autocompletes.
 
 [stow]: https://www.gnu.org/software/stow/
