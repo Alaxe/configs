@@ -1,6 +1,4 @@
-require 'coc.highlight'
-
-vim.o.updatetime = 300
+vim.o.updatetime = 50
 
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"text", "markdown", "tex", 'gitcommit'},

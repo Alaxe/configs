@@ -4,13 +4,15 @@ require "paq" {
     'tpope/vim-sensible',
     'kyazdani42/nvim-web-devicons', -- icons in statusline
     'nvim-lualine/lualine.nvim',
-    {'neoclide/coc.nvim', branch = 'release'},
+    -- {'neoclide/coc.nvim', branch = 'release'},
 }
 
+--[[
 vim.g.coc_global_extensions = {
     'coc-json',
-    'coc-pyright',
+    --'coc-jedi',
 }
+--]]
 
 -- General options
 
@@ -122,9 +124,5 @@ vim.keymap.set("", "<F9>", buildCurrent)
 
 -- Plugin configuration
 
-if pcall(require, 'lualine') then
-    require 'line-conf'
-end
-if pcall(require, 'coc.highlight') then
-    require "coc-conf"
-end
+require 'line-conf'
+-- require "coc-conf"
