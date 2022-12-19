@@ -1,10 +1,5 @@
 vim.o.updatetime = 50
 
-vim.api.nvim_create_autocmd("Filetype", {
-    pattern = {"text", "markdown", "tex", 'gitcommit'},
-    callback = function() vim.b.coc_suggest_disable = true; end
-})
-
 
 local keyset = vim.keymap.set
 -- Auto complete

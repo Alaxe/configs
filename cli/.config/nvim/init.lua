@@ -125,4 +125,10 @@ vim.keymap.set("", "<F9>", buildCurrent)
 -- Plugin configuration
 
 require 'line-conf'
--- require "coc-conf"
+vim.api.nvim_create_autocmd("Filetype", {
+    pattern = {"text", "markdown", "tex", 'gitcommit'},
+    callback = function() vim.b.coc_suggest_disable = true; end
+})
+
+
+--require "coc-conf"
