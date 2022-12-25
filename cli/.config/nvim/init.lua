@@ -4,15 +4,13 @@ require "paq" {
     'tpope/vim-sensible',
     'kyazdani42/nvim-web-devicons', -- icons in statusline
     'nvim-lualine/lualine.nvim',
-    -- {'neoclide/coc.nvim', branch = 'release'},
+    {'neoclide/coc.nvim', branch = 'release'},
 }
 
---[[
 vim.g.coc_global_extensions = {
     'coc-json',
-    --'coc-jedi',
+    'coc-jedi',
 }
---]]
 
 -- General options
 
@@ -42,7 +40,7 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_altv = 1
 vim.g.netrw_winsize = 25
 
-vim.keymap.set("", "<C-N>", ":Explore <CR>")
+vim.keymap.set("", "<C-E>", ":Explore <CR>")
 vim.keymap.set("", "<C-T>", ":tabnew <CR>")
 vim.keymap.set("", "<C-C>", ":q <CR>")
 
@@ -125,10 +123,11 @@ vim.keymap.set("", "<F9>", buildCurrent)
 -- Plugin configuration
 
 require 'line-conf'
+
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"text", "markdown", "tex", 'gitcommit'},
     callback = function() vim.b.coc_suggest_disable = true; end
 })
 
 
---require "coc-conf"
+require "coc-conf"
