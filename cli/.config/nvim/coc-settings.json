@@ -1,0 +1,10 @@
+{
+    "jedi.trace.server": "messages",
+    "jedi.completion.disableSnippets": true,
+    "jedi.jediSettings.autoImportModules": [
+        "numpy",
+        "torch",
+        "torchdata",
+        "torchtext"
+    ]
+}
