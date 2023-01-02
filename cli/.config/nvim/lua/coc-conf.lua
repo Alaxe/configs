@@ -1,4 +1,4 @@
-vim.o.updatetime = 50
+vim.o.updatetime = 300
 
 
 local keyset = vim.keymap.set
