@@ -20,7 +20,9 @@ export GOCACHE="/data/scratch/alexalex/.cache/go"
 source /data/sanchez/tools/nodejs-16.17.0/env.sh
 source /data/sanchez/tools/neovim-0.7.2/env.sh
 
-alias jenv="source ~/data-scratch/jenv/bin/activate"
+#source /data/sanchez/tools/alexalex/janncy/paths.sh
+
+#alias jenv="source ~/data-scratch/jenv/bin/activate"
 
 # export PROMPT_DIRTRIM=2
 # export PS1="@\h: \w\$ "
