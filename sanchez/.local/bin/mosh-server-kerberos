@@ -61,9 +61,9 @@ EOF
 check_max_logins;
 
 sub finish {
-    if ( not grep { $_ eq "--" } @ARGV ) {
-      push @ARGV, '--', $SHELL;
-    }
+    # if ( not grep { $_ eq "--" } @ARGV ) {
+    #  push @ARGV, '--', $SHELL;
+    # }
 
     $ENV{ 'MOSH_SERVER_NETWORK_TMOUT' } = q{1209600}; # 14-day timeout per 2/15/2017 jweiss request
 
