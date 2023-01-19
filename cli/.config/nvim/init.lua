@@ -28,8 +28,8 @@ vim.o.textwidth = 80
 vim.o.foldmethod = 'syntax'
 vim.o.foldlevelstart = 20
 
-vim.opt.list = true
-vim.opt.listchars = {tab = '> ', trail='_'}
+vim.opt_local.list = true
+vim.opt_local.listchars = {tab = '> ', trail='_'}
 
 
 -- Netrw and tabs
@@ -64,8 +64,8 @@ vim.filetype.add({
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"make", "go"},
     callback = function()
-    vim.go.expandtab = false
-    vim.opt_local.listchars = {trail = "_"}
+        vim.go.expandtab = false
+        vim.opt_local.listchars:prepend {tab='  '}
     end
 })
 
@@ -131,3 +131,9 @@ vim.api.nvim_create_autocmd("Filetype", {
 
 
 require "coc-conf"
+
+if vim.env.EXTRA_VIM then
+    for p in string.gmatch(vim.env.EXTRA_VIM, "[^:]+") do
+        dofile(p)
+    end
+end

@@ -1,0 +1,5 @@
+extra_vim_init() {
+    if [ -f .nvim.lua ]; then
+        path_add EXTRA_VIM .nvim.lua
+    fi
+}
