@@ -20,8 +20,7 @@ zinit() {
 
 zssh() {
     zinit;
-    mosh --server="~/.local/bin/mosh-server-kerberos" $1.csail.mit.edu \
-        -- tmux new-session -A -D -s 0
+    mosh --server="~/.local/bin/mosh-server-kerberos" $1.csail.mit.edu ${@:2}
 }
 
 zpush() {
