@@ -111,7 +111,8 @@ local function buildCurrent()
         io.close(makefile)
     elseif cmd then
         vim.api.nvim_command("w")
-        vim.api.nvim_command("!" .. cmd)
+        vim.api.nvim_command("te " .. cmd)
+        vim.api.nvim_command("startinsert")
     else
         print("Can't build filetype " .. vim.bo.filetype)
     end
@@ -125,7 +126,7 @@ vim.keymap.set("", "<F9>", buildCurrent)
 require 'line-conf'
 
 vim.api.nvim_create_autocmd("Filetype", {
-    pattern = {"text", "markdown", "tex", 'gitcommit'},
+    pattern = {"text", "markdown", "tex", 'gitcommit', "cpp"},
     callback = function() vim.b.coc_suggest_disable = true; end
 })
 
