@@ -5,6 +5,7 @@ require "paq" {
     'kyazdani42/nvim-web-devicons', -- icons in statusline
     'nvim-lualine/lualine.nvim',
     {'neoclide/coc.nvim', branch = 'release'},
+    'whonore/Coqtail',
 }
 
 vim.g.coc_global_extensions = {
