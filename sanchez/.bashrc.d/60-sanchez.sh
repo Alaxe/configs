@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir -p /scratch/alexalex/.cache
 
 export ZSIMDEPSROOT=/data/sanchez/benchmarks/zsim-deps
 export PINPATH=$ZSIMDEPSROOT/pin-2.14-71313-gcc.4.4.7-linux
