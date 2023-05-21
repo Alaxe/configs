@@ -99,7 +99,7 @@ local function buildCurrent()
         javascript = "node %",
         python = "python %",
         sh = "bash %",
-        tex = "xelatex -interaction=nonstopmode -halt-on-error %",
+        tex = "pdflatex -interaction=nonstopmode -halt-on-error %",
     }
 
 
