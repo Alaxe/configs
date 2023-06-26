@@ -65,7 +65,7 @@ vim.filetype.add({
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"make", "go"},
     callback = function()
-        vim.go.expandtab = false
+        vim.o.expandtab = false
         vim.opt_local.listchars:prepend {tab='  '}
     end
 })
@@ -73,14 +73,14 @@ vim.api.nvim_create_autocmd("Filetype", {
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"html", "htmldjango", "markdown"},
     callback = function()
-        vim.go.tabstop = 2
-        vim.go.shiftwidth = 2
+        vim.o.tabstop = 2
+        vim.o.shiftwidth = 2
     end
 })
 
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"bsv"},
-    callback = function() vim.go.textwidth = 100; end
+    callback = function() vim.o.textwidth = 100; end
 })
 
 
