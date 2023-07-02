@@ -1,9 +1,9 @@
 #!/bin/bash
 
-xrandr --listmonitors | grep ' HDMI-2' &> /dev/null;
+xrandr -q | grep '^HDMI-2 connected' &> /dev/null;
 hdmi=$?
 
-xrandr --listmonitors | grep ' DP-1' &> /dev/null;
+xrandr -q | grep '^DP-1 connected' &> /dev/null;
 dp=$?
 
 if [ $hdmi == 0 ]; then
@@ -20,6 +20,6 @@ elif [ $dp == 0 ]; then
     xrandr --fb "1920x1080";
 else
     # Only laptop screen, use 144 dpi
-    echo 'Xft.dpi: 144' | xrdb -merge;
+    echo 'Xft.dpi: 144' | xrdb -override;
     export DPI_SCALE_FACTOR=1.5
 fi
