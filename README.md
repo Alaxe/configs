@@ -1,10 +1,5 @@
 All configs are managed through [GNU Stow][stow].
 
-Since this repo uses submodules, after cloning it run
-```bash
-git submodule update --init --recursive
-```
-
 ## User-Level configs
 * Shared configs
 ```bash
