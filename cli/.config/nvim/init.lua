@@ -47,6 +47,11 @@ vim.keymap.set("", "<C-C>", ":q <CR>")
 
 vim.keymap.set("", "<F5>", "!xclip -selection clipboard < % <CR>")
 
+vim.keymap.set("", "j", "gj")
+vim.keymap.set("", "gj", "j")
+vim.keymap.set("", "k", "gk")
+vim.keymap.set("", "gk", "k")
+
 
 -- Cyrilic mappings
 require("cyrilic")
@@ -71,7 +76,7 @@ vim.api.nvim_create_autocmd("Filetype", {
 })
 
 vim.api.nvim_create_autocmd("Filetype", {
-    pattern = {"html", "htmldjango", "markdown"},
+    pattern = {"html", "htmldjango", "markdown", "bib"},
     callback = function()
         vim.o.tabstop = 2
         vim.o.shiftwidth = 2
@@ -81,6 +86,11 @@ vim.api.nvim_create_autocmd("Filetype", {
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"bsv"},
     callback = function() vim.o.textwidth = 100; end
+})
+
+vim.api.nvim_create_autocmd("Filetype", {
+    pattern = {"bib", "tex", "markdown"},
+    callback = function() vim.o.textwidth = 0; end
 })
 
 
