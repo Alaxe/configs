@@ -1,3 +1,2 @@
 #!/bin/bash
-aklog
-tmux new-session -A -D -s 0
+krenew -t -- tmux new-session -A -D -s 0
