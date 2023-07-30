@@ -24,7 +24,9 @@ vim.o.expandtab = true
 vim.o.number = true
 vim.o.signcolumn = "number"
 vim.o.showmatch = true
+
 vim.o.textwidth = 80
+vim.o.linebreak = true
 
 vim.o.foldmethod = 'syntax'
 vim.o.foldlevelstart = 20
