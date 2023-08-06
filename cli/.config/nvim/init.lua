@@ -49,10 +49,10 @@ vim.keymap.set("", "<C-C>", ":q <CR>")
 
 vim.keymap.set("", "<F5>", "!xclip -selection clipboard < % <CR>")
 
-vim.keymap.set("", "j", "gj")
-vim.keymap.set("", "gj", "j")
-vim.keymap.set("", "k", "gk")
-vim.keymap.set("", "gk", "k")
+for _, c in pairs({"j", "k", "$", "^"}) do
+    vim.keymap.set("", c, "g" .. c)
+    vim.keymap.set("", "g" .. c, c)
+end
 
 
 -- Cyrilic mappings
