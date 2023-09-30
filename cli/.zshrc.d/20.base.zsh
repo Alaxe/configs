@@ -10,7 +10,7 @@ compinit
 HISTFILE=~/.cache/histfile
 HISTSIZE=10000
 SAVEHIST=10000
-setopt autocd
+#setopt autocd
 unsetopt beep
 
 bindkey -v
