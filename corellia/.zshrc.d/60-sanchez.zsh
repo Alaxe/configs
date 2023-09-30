@@ -1,6 +1,4 @@
-#!/bin/bash
-mkdir -p /scratch/alexalex/.cache
-
+#!/bin/zsh
 export ZSIMDEPSROOT=/data/sanchez/benchmarks/zsim-deps
 export PINPATH=$ZSIMDEPSROOT/pin-2.14-71313-gcc.4.4.7-linux
 export LIBCONFIGPATH=/data/sanchez/benchmarks/alexalex/isa/libconfig-1.7.3/inst/
