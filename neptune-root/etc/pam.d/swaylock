@@ -1,0 +1,7 @@
+#
+# PAM configuration file for the swaylock screen locker. By default, it includes
+# the 'login' configuration file (see /etc/pam.d/login)
+#
+auth  [success=done new_authtok_reqd=done auth_err=1 default=ignore] pam_unix.so
+auth  sufficient   pam_fprintd.so timeout=10
+auth  include login

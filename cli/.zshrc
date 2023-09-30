@@ -1,8 +1,8 @@
 # Only interactive sessions
 [[ $- != *i* ]] && return
 
-if [ -d ~/.bashrc.d/ ] ; then
-    for f in ~/.bashrc.d/?*.sh ; do
+if [ -d ~/.zshrc.d/ ] ; then
+    for f in ~/.zshrc.d/?*.zsh ; do
         [ -x "$f" ] && . "$f"
     done
 fi

@@ -1,13 +1,11 @@
 [user]
 	email = alexalex@mit.edu
 	name = Aleksandar Krastev
-[core]
-	editor = nvim
 [push]
 	default = simple
 [alias]
 	lol = log --graph --oneline --decorate --color --all
 [init]
 	defaultBranch = main
-[pul]
+[pull]
 	ff = only

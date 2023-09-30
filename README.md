@@ -25,12 +25,6 @@ In my case, this required
 chmod a+x ~
 ```
 
-I'm using a modified verison of Bulgarian Dvorak from [nikolavp/configs].
-Installing it requires running
-```bash
-sudo bash -c "cat bg-dvorak-phonetic >> /usr/share/X11/xkb/symbols/bg"
-```
-
 ## Neovim
 This is in flux.
 
@@ -42,4 +36,3 @@ nvim +PaqSync +qall
 You need to run things with coc manually to install autocompletes.
 
 [stow]: https://www.gnu.org/software/stow/
-[nikolavp/configs]: https://github.com/nikolavp/configs

@@ -1,4 +1,4 @@
-// append the content of this file to /usr/share/X11/xkb/symbols/bg
+// From <https://github.com/nikolavp/configs/blob/master/bg-dvorak-phonetic>
 partial alphanumeric_keys
 xkb_symbols "dvorak_phonetic" {
   name[Group1]= "Dvorak Bulgarian (traditional phonetic)";
@@ -89,7 +89,7 @@ xkb_symbols "dvorak_phonetic" {
 
 partial alphanumeric_keys
 xkb_symbols "dvp_phonetic" {
-  include "bg(dvorak_phonetic)"
+  include "bg-dvorak(dvorak_phonetic)"
   name[Group1]= "Programmer Dvorak Bulgarian (traditional phonetic)";
 
   key <TLDE> {   [ Cyrillic_che,      Cyrillic_CHE        ]    };
