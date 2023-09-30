@@ -1,6 +1,7 @@
 export EDITOR=nvim
 
 zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true # Might be a performance issue?
 zstyle :compinstall filename '/home/alex/.zshrc'
 
