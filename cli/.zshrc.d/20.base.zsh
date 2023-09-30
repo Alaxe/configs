@@ -21,9 +21,9 @@ if [ -n "$VIRTUAL_ENV" ]; then
 fi
 
 if [[ ${EUID} == 0 ]] ; then
-    PS1='%B%F{red}[%M%F{14} %2~%F{red}]#%f%b '
+    PS1='%B%F{red}[%m%F{14} %2~%F{red}]#%f%b '
 else
-    PS1='%B%F{10}[%M%F{white} %2~%F{10}]$%f%b '
+    PS1='%B%F{10}[%m%F{white} %2~%F{10}]$%f%b '
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
