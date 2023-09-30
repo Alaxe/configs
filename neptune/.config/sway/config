@@ -84,6 +84,7 @@ input "type:keyboard" {
 
 exec nm-applet
 exec mako
+exec blueman-applet
 
 ### Key bindings
 #
