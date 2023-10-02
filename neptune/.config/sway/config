@@ -17,11 +17,10 @@ font Inconsolata Nerd Font Propo 14
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $bemenu bemenu -i -p "" --fn "Inconsolata Nerd Font Propo 14" -H 30 --hp 5 \
-    --fb "#222D31" --nb "#222D31" --ab "#222D31" --hb "#556064" --hf "#80FFF9"
 
-#client.unfocused        #2F3D44  #1ABC9C #454948
-set $menu j4-dmenu-desktop --no-exec --dmenu '$bemenu' | xargs swaymsg exec --
+exec systemctl --user import-environment BEMENU_OPTS
+exec dbus-update-activation-environment --systemd BEMENU_OPTS
+set $menu j4-dmenu-desktop --no-exec --dmenu bemenu | xargs swaymsg exec --
 
 set $lock swaylock
 
