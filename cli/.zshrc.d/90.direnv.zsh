@@ -1,1 +1,1 @@
-eval "$(direnv hook bash)" || true
+eval "$(direnv hook zsh)" || true
