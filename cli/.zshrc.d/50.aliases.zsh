@@ -8,7 +8,7 @@ alias cp="cp -i"           # confirm before overwriting something
 alias rm="rm -i"
 alias df='df -h'           # human-readable sizes
 alias free='free -m'       # show sizes in MB
-alias sudo='sudo -E '       # so that aliases still work
+alias sudo='sudo '       # so that aliases still work
 
 alias vim=nvim
 

@@ -3,7 +3,7 @@ export EDITOR=nvim
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true # Might be a performance issue?
-zstyle :compinstall filename '/home/alex/.zshrc'
+#zstyle :compinstall filename '/home/alex/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -21,11 +21,9 @@ if [ -n "$VIRTUAL_ENV" ]; then
     source "$VIRTUAL_ENV/bin/activate"
 fi
 
-if [[ ${EUID} == 0 ]] ; then
-    PS1='%B%F{red}[%m%F{14} %2~%F{red}]#%f%b '
-else
-    PS1='%B%F{10}[%m%F{white} %2~%F{10}]$%f%b '
-fi
+PS1='%B%F{10}[%m%F{white} %2~%F{10}]$%f%b '
+# for root
+#PS1='%B%F{red}[%m%F{14} %2~%F{red}]#%f%b '
 
 export PATH="$HOME/.local/bin:$PATH"
 
