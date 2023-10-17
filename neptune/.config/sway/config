@@ -71,9 +71,15 @@ input "type:touchpad" {
      middle_emulation enabled
 }
 
+# For --to-code
+input * {
+    xkb_layout "us"
+    xkb_variant "dvp"
+}
+
 input "type:keyboard" {
-    xkb_variant "dvp,dvp_phonetic"
     xkb_layout "us,bg-dvorak"
+    xkb_variant "dvp,dvp_phonetic"
     xkb_options "caps:escape, grp:ctrls_toggle, altwin:menu_win"
 }
 
@@ -89,17 +95,6 @@ exec blueman-applet
 #
 # Basics:
 #
-    # Start a terminal
-    bindsym $mod+Return exec $term
-
-    # Kill focused window
-    bindsym $mod+Shift+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
-
-    bindsym $mod+Shift+o exec swaylock
-
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -107,36 +102,51 @@ exec blueman-applet
     # mouse button for dragging.
     floating_modifier $mod normal
 
+bindsym --to-code {
+    # Start a terminal
+    $mod+Return exec $term
+
+    # Kill focused window
+    $mod+Shift+q kill
+
+    # Start your launcher
+    $mod+d exec $menu
+
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec \
+    $mod+Shift+e exec \
         swaynag -t warning -m 'Exit sway?' -B 'Yes' 'swaymsg exit'
+}
+
+    bindsym $mod+Shift+o exec swaylock
 #
 # Moving around:
 #
+bindsym --to-code {
     # Move your focus around
-    bindsym $mod+$left  focus left
-    bindsym $mod+$down  focus down
-    bindsym $mod+$up    focus up
-    bindsym $mod+$right focus right
+    $mod+$left  focus left
+    $mod+$down  focus down
+    $mod+$up    focus up
+    $mod+$right focus right
     # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left  focus left
-    bindsym $mod+Down  focus down
-    bindsym $mod+Up    focus up
-    bindsym $mod+Right focus right
+    $mod+Left  focus left
+    $mod+Down  focus down
+    $mod+Up    focus up
+    $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left  move left
-    bindsym $mod+Shift+$down  move down
-    bindsym $mod+Shift+$up    move up
-    bindsym $mod+Shift+$right move right
+    $mod+Shift+$left  move left
+    $mod+Shift+$down  move down
+    $mod+Shift+$up    move up
+    $mod+Shift+$right move right
     # Ditto, with arrow keys
-    bindsym $mod+Shift+Left  move left
-    bindsym $mod+Shift+Down  move down
-    bindsym $mod+Shift+Up    move up
-    bindsym $mod+Shift+Right move right
+    $mod+Shift+Left  move left
+    $mod+Shift+Down  move down
+    $mod+Shift+Up    move up
+    $mod+Shift+Right move right
+}
 #
 # Workspaces:
 #
@@ -154,29 +164,30 @@ exec blueman-applet
     # Starting workspace
     workspace $ws2
 
+bindsym --to-code {
     # Switch to workspace
-    bindsym $mod+parenleft    workspace $ws1
-    bindsym $mod+parenright   workspace $ws2
-    bindsym $mod+braceright   workspace $ws3
-    bindsym $mod+plus         workspace $ws4
-    bindsym $mod+braceleft    workspace $ws5
-    bindsym $mod+bracketright workspace $ws6
-    bindsym $mod+bracketleft  workspace $ws7
-    bindsym $mod+exclam       workspace $ws8
-    bindsym $mod+equal        workspace $ws9
-    bindsym $mod+asterisk     workspace $ws10
+    $mod+parenleft    workspace $ws1
+    $mod+parenright   workspace $ws2
+    $mod+braceright   workspace $ws3
+    $mod+plus         workspace $ws4
+    $mod+braceleft    workspace $ws5
+    $mod+bracketright workspace $ws6
+    $mod+bracketleft  workspace $ws7
+    $mod+exclam       workspace $ws8
+    $mod+equal        workspace $ws9
+    $mod+asterisk     workspace $ws10
 
     # Move focused container to workspace
-    bindsym $mod+Shift+parenleft    move container to workspace $ws1
-    bindsym $mod+Shift+parenright   move container to workspace $ws2
-    bindsym $mod+Shift+braceright   move container to workspace $ws3
-    bindsym $mod+Shift+plus         move container to workspace $ws4
-    bindsym $mod+Shift+braceleft    move container to workspace $ws5
-    bindsym $mod+Shift+bracketright move container to workspace $ws6
-    bindsym $mod+Shift+bracketleft  move container to workspace $ws7
-    bindsym $mod+Shift+exclam       move container to workspace $ws8
-    bindsym $mod+Shift+equal        move container to workspace $ws9
-    bindsym $mod+Shift+asterisk     move container to workspace $ws10
+    $mod+Shift+parenleft    move container to workspace $ws1
+    $mod+Shift+parenright   move container to workspace $ws2
+    $mod+Shift+braceright   move container to workspace $ws3
+    $mod+Shift+plus         move container to workspace $ws4
+    $mod+Shift+braceleft    move container to workspace $ws5
+    $mod+Shift+bracketright move container to workspace $ws6
+    $mod+Shift+bracketleft  move container to workspace $ws7
+    $mod+Shift+exclam       move container to workspace $ws8
+    $mod+Shift+equal        move container to workspace $ws9
+    $mod+Shift+asterisk     move container to workspace $ws10
 
 #
 # Layout stuff:
@@ -184,25 +195,25 @@ exec blueman-applet
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    $mod+b splith
+    $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+t layout tabbed
-    bindsym $mod+e layout toggle split
+    $mod+s layout stacking
+    $mod+t layout tabbed
+    $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    $mod+a focus parent
 #
 # Scratchpad:
 #
@@ -210,11 +221,12 @@ exec blueman-applet
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    $mod+Shift+minus move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    $mod+minus scratchpad show
+}
 #
 # Resizing containers:
 #
