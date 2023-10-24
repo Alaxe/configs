@@ -71,13 +71,7 @@ input "type:touchpad" {
      middle_emulation enabled
 }
 
-# For --to-code
 input * {
-    xkb_layout "us"
-    xkb_variant "dvp"
-}
-
-input "type:keyboard" {
     xkb_layout "us,bg-dvorak"
     xkb_variant "dvp,dvp_phonetic"
     xkb_options "caps:escape, grp:ctrls_toggle, altwin:menu_win"
