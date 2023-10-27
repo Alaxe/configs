@@ -65,6 +65,7 @@ vim.filetype.add({
     pattern = {
         [".*.bsv"] = "bsv", -- bluespec
         [".*.ms"] = "bsv", -- minispec
+        [".*.g4"] = "antlr4", -- antrl
         [".*.tex"] = "tex", -- disable plaintex
     }
 })
