@@ -225,26 +225,28 @@ bindsym --to-code {
 # Resizing containers:
 #
 mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym $left  resize shrink width  10ppt
-    bindsym $down  resize grow   height 10ppt
-    bindsym $up    resize shrink height 10ppt
-    bindsym $right resize grow   width  10ppt
+    bindsym --to-code {
+        # left will shrink the containers width
+        # right will grow the containers width
+        # up will shrink the containers height
+        # down will grow the containers height
+        $left  resize shrink width  10ppt
+        $down  resize grow   height 10ppt
+        $up    resize shrink height 10ppt
+        $right resize grow   width  10ppt
 
-    # Ditto, with arrow keys
-    bindsym Left   resize shrink width  10ppt
-    bindsym Down   resize grow   height 10ppt
-    bindsym Up     resize shrink height 10ppt
-    bindsym Right  resize grow   width  10ppt
+        # Ditto, with arrow keys
+        Left   resize shrink width  10ppt
+        Down   resize grow   height 10ppt
+        Up     resize shrink height 10ppt
+        Right  resize grow   width  10ppt
 
-    # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+        # Return to default mode
+        Return mode "default"
+        Escape mode "default"
+    }
 }
-bindsym $mod+r mode "resize"
+bindsym --to-code $mod+r mode "resize"
 
 bindsym {
     XF86AudioMute        exec pactl set-sink-mute @DEFAULT_SINK@ toggle
