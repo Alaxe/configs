@@ -11,6 +11,7 @@ require "paq" {
 vim.g.coc_global_extensions = {
     'coc-json',
     'coc-jedi',
+    'coc-clangd',
 }
 
 -- General options
@@ -140,7 +141,7 @@ vim.keymap.set("", "<F9>", buildCurrent)
 require 'line-conf'
 
 vim.api.nvim_create_autocmd("Filetype", {
-    pattern = {"text", "markdown", "tex", 'gitcommit', "cpp"},
+    pattern = {"text", "markdown", "tex", 'gitcommit'},
     callback = function() vim.b.coc_suggest_disable = true; end
 })
 
