@@ -18,6 +18,6 @@ export GOPATH="/data/scratch/alexalex/.go"
 export GOCACHE="/data/scratch/alexalex/.cache/go"
 
 export SCONSFLAGS=-j32
-export TERM=xterm
+export TERM="xterm-256color"
 
 source /data/sanchez/tools/alexalex/dev/env.sh
