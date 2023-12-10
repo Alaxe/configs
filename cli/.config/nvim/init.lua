@@ -68,6 +68,7 @@ vim.filetype.add({
         [".*.ms"] = "bsv", -- minispec
         [".*.g4"] = "antlr4", -- antrl
         [".*.tex"] = "tex", -- disable plaintex
+        ["SConscript"] = "python"
     }
 })
 
