@@ -3,3 +3,6 @@ export PATH="$PATH:$GEM_HOME/bin"
 export CUPS_USER=alexalex
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 export SCONSFLAGS=-j20
+
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+export PATH="$HOME/.local/lib/bsc-2023.07/bin:$PATH"
