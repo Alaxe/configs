@@ -2,4 +2,4 @@
 Type=simple
 User=alex
 ExecStart=
-ExecStart=/usr/bin/rclone sync /home/alex/.backup b2-neptune:alexalex-neptune --fast-list --transfers 32 --progress --copy-links
+ExecStart=/home/alex/.local/bin/run-backups
