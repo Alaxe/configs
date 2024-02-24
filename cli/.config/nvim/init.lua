@@ -105,7 +105,7 @@ vim.b.verilog_indent_modules = 1
 
 local function buildCurrent()
     cmd_table = {
-        cpp = "g++ % -o %:r --std=c++14" ..
+        cpp = "g++ % -o %:r --std=c++20" ..
             " -fsanitize=undefined -fsanitize=address" ..
             " -Wall -Wextra -Wpedantic" ..
             " && ./%:r",
