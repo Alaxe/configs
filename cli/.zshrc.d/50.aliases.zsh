@@ -41,7 +41,7 @@ alias mosh='mosh --experimental-remote-ip=remote'
 
 zinit() {
     kinit -R -f alexalex@CSAIL.MIT.EDU 2> /dev/null \
-        || kinit -f alexalex@CSAIL.MIT.EDU;
+        || kinit -f alexalex@CSAIL.MIT.EDU -l 60d;
 }
 
 zssh() {

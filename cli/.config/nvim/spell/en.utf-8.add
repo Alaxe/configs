@@ -239,3 +239,6 @@ datapath
 superlinearly
 endfor
 nikola
+submartingale
+supermartingale
+datapaths
