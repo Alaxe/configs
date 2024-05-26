@@ -32,6 +32,10 @@ vim.o.linebreak = true
 vim.o.foldmethod = 'syntax'
 vim.o.foldlevelstart = 20
 
+vim.opt.termguicolors = false
+vim.opt.background = 'dark'
+vim.cmd('colorscheme vim')
+
 vim.opt_local.list = true
 vim.opt_local.listchars = {tab = '> ', trail='_'}
 
