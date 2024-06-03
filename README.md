@@ -1,22 +1,20 @@
 All configs are managed through [GNU Stow][stow].
 
-## User-Level configs
-* Shared configs
+## Automated setup
+Run (which may invoke `sudo`):
 ```bash
-stow -t ~ --restow cli
-```
-* Just for laptop
-```bash
-stow -t ~ --restow laptop
-```
-* Just for Sanchez cluster
-```bash
-stow -t ~ --restow sanchez
+<neptune, correlia>.sh
 ```
 
-## Root-level configs
+## Manual Setup
+For user-level configs, run:
 ```bash
-sudo stow -t / --restow root/
+stow -t ~ --restow <cli, neptune, correlia>
+```
+
+Optionally, for root configs, run (as root):
+```bash
+sudo stow -t / --restow neputne-root/
 ```
 To let other users follow the symlinks created by Stow, they need execute
 permissions on all parent directories.
