@@ -12,6 +12,7 @@ vim.g.coc_global_extensions = {
     'coc-json',
     'coc-jedi',
     'coc-clangd',
+    'coc-rust-analyzer'
 }
 
 -- General options
@@ -113,6 +114,7 @@ local function buildCurrent()
             " -fsanitize=undefined -fsanitize=address" ..
             " -Wall -Wextra -Wpedantic" ..
             " && ./%:r",
+        rust = "rustc % && ./%:r",
         go = "go run %",
         java = "javac % && java %:r",
         javascript = "node %",
