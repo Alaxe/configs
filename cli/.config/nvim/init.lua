@@ -39,7 +39,7 @@ vim.cmd('colorscheme vim')
 
 vim.opt_local.list = true
 vim.opt_local.listchars = {tab = '> ', trail='_'}
-
+vim.opt.clipboard = "unnamedplus"
 
 -- Netrw and tabs
 
