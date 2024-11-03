@@ -73,6 +73,7 @@ vim.filetype.add({
         [".*.ms"] = "bsv", -- minispec
         [".*.g4"] = "antlr4", -- antrl
         [".*.tex"] = "tex", -- disable plaintex
+        [".*.sy"] = "syncopy",
         ["SConscript"] = "python"
     }
 })
@@ -94,7 +95,7 @@ vim.api.nvim_create_autocmd("Filetype", {
 })
 
 vim.api.nvim_create_autocmd("Filetype", {
-    pattern = {"bsv"},
+    pattern = {"bsv", "syncopy"},
     callback = function() vim.o.textwidth = 100; end
 })
 
