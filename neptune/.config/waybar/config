@@ -58,7 +58,7 @@
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "network#wifi": {
-        "interface": "wlp0*", // (Optional) To force the use of this interface
+        "interface": "*wl*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format": "{ifname}: {ipaddr}",
         "format-disconnected": "Disconnected ⚠"
