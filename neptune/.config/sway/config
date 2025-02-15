@@ -90,6 +90,7 @@ input * {
 exec nm-applet
 exec mako
 exec blueman-applet
+exec protonvpn-app
 
 ### Key bindings
 #
