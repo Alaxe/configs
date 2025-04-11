@@ -268,41 +268,27 @@ bindsym {
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar swaybar_command waybar
-# bar {
-#     position top
-# 
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     #status_command while date +'%d %b %H:%M '; do sleep 1; done
-#     status_command i3status -c .config/sway/i3status.conf
-#     height 20
-#     tray_output *
-# 
-#     colors {
-#         background #222D31
-#         statusline #F9FAF9
-#         separator  #454947
-# 
-#         #                  border  bg      text
-#         focused_workspace  #F9FAF9 #16a085 #292F34
-#         active_workspace   #595B5B #353836 #FDF6E3
-#         inactive_workspace #595B5B #222D31 #EEE8D5
-#         binding_mode       #16a085 #2C2C2C #F9FAF9
-#         urgent_workspace   #16a085 #FDF6E3 #E5201D
-#     }
-# }
 
 #
 # Colors
 #
-    #                       border  backgr. text    indic.   child_border
-    client.focused          #556064 #556064 #80FFF9 #FDF6E3
-    client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-    client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-    client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-    client.placeholder      #000000 #0c0c0c #ffffff #000000
+#                       border  backgr. text    indic.   child_border
+client.focused          #556064 #556064 #80FFF9 #FDF6E3
+client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-    client.background       #2B2C2B
+client.background       #2B2C2B
+
+# include catppuccin-frappe
+# # target                 title     bg    text   indicator  border
+# client.focused           $lavender $base $text  $rosewater $lavender
+# client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+# client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+# client.urgent            $peach    $base $peach $overlay0  $peach
+# client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+# client.background        $base
 
 include /etc/sway/config.d/*
 
