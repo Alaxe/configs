@@ -1,16 +1,10 @@
 {
-    "jedi.trace.server": "messages",
-    "jedi.completion.disableSnippets": true,
-    "jedi.jediSettings.autoImportModules": [
-        "numpy",
-        "torch",
-        "torchdata",
-        "torchtext"
-    ],
     "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/17.0.3/clangd_17.0.3/bin/clangd",
     "rust-analyzer.inlayHints.maxLength": 5,
     "rust-analyzer.inlayHints.chainingHints.enable": false,
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.imports.granularity.group": "module"
+    "rust-analyzer.imports.granularity.group": "module",
+    "pyright.inlayHints.parameterTypes": false,
+    "pyright.inlayHints.variableTypes": false,
 }

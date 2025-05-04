@@ -11,7 +11,7 @@ require "paq" {
 
 vim.g.coc_global_extensions = {
     'coc-json',
-    'coc-jedi',
+    'coc-pyright',
     'coc-clangd',
     'coc-rust-analyzer'
 }
