@@ -83,6 +83,11 @@ input * {
     xkb_options "caps:escape, grp:ctrls_toggle, altwin:menu_win"
 }
 
+input "4176:1031:Yubico_YubiKey_OTP+FIDO+CCID" {
+    xkb_layout "us"
+    xkb_variant ""
+}
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 
 ### Startup
