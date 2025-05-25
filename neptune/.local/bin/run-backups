@@ -1,4 +1,4 @@
 #!/bin/bash
 FLAGS="--transfers 32 --progress --fast-list --copy-links"
 /usr/bin/rclone sync google-drive: /home/alex/.google-drive $FLAGS
-/usr/bin/rclone sync /home/alex/.backup b2-neptune:alexalex-neptune $FLAGS
+/usr/bin/rclone sync /home/alex/.backup b2-neptune: $FLAGS
