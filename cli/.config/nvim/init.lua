@@ -99,6 +99,11 @@ vim.api.nvim_create_autocmd("Filetype", {
 })
 
 vim.api.nvim_create_autocmd("Filetype", {
+    pattern = {"python"},
+    callback = function() vim.o.textwidth = 88; end
+})
+
+vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"bib", "tex", "markdown"},
     callback = function() vim.o.textwidth = 0; end
 })
