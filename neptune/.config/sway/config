@@ -80,7 +80,7 @@ input "type:touchpad" {
 input * {
     xkb_layout "us,bg-dvorak"
     xkb_variant "dvp,dvp_phonetic"
-    xkb_options "caps:escape, grp:ctrls_toggle, altwin:menu_win"
+    xkb_options "caps:escape, grp:ctrls_toggle, lv3:ralt_switch_multikey"
 }
 
 input "4176:1031:Yubico_YubiKey_OTP+FIDO+CCID" {
