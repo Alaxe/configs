@@ -70,12 +70,13 @@ vim.filetype.add({
     pattern = {
         [".*.bsv"] = "bsv", -- bluespec
         [".*.ms"] = "bsv", -- minispec
-        [".*.g4"] = "antlr4", -- antrl
+        [".*.g4"] = "antlr4",
         [".*.tex"] = "tex", -- disable plaintex
         [".*.sy"] = "syncopy",
         ["SConscript"] = "python"
     }
 })
+
 
 vim.api.nvim_create_autocmd("Filetype", {
     pattern = {"make", "go"},
@@ -165,3 +166,10 @@ if vim.env.EXTRA_VIM then
         dofile(p)
     end
 end
+
+vim.api.nvim_create_autocmd({"BufRead","BufNewFile"}, {
+    pattern = {"SConstruct","SConscript"},
+    callback = function()
+        vim.b.coc_diagnostic_disable = 1
+    end
+})

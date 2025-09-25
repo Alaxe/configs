@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    Bluespec System Verilog (BSV)
 " Maintainer:  Hadar Agam -- hadar at bluespec dot com
-" Last Change: Oct 24 2006 
+" Last Change: Oct 24 2006
 " License:     Proprietary
 
 " work with vim < 6.0
