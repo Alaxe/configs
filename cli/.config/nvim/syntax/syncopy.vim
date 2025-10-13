@@ -19,7 +19,7 @@ syntax keyword sy_invalid invalid
 
 syntax region sy_string start=/"/ end=/"/
 
-syntax keyword sy_keyword as comb mod import let rule systolic def tick proc
+syntax keyword sy_keyword as comb mod import let rule systolic def tick proc pipe
 syntax keyword sy_mut mut
 syntax keyword sy_control_flow if else in
 syntax match sy_control_flow "\(#for\|#if\)\>"

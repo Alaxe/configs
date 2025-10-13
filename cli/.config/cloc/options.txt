@@ -1,0 +1,1 @@
+--read-lang-def=/home/alex/.config/cloc/languages.txt
