@@ -262,3 +262,14 @@ builtins
 Destructuring
 bool
 destructuring
+pipelining
+composable
+Verilog
+XPDL
+PDL
+RegFile
+scoreboarding
+misspeculation
+misspeculations
+IPC
+mispredictions
