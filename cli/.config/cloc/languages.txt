@@ -10,3 +10,9 @@ Bluespec-SystemVerilog
     filter call_regexp_common C++
     extension bsv
     3rd_gen_scale 1.00
+Minispec
+    filter rm_comments_in_strings " /* */
+    filter rm_comments_in_strings " //
+    filter call_regexp_common C++
+    extension ms
+    3rd_gen_scale 1.00
