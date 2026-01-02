@@ -52,6 +52,4 @@ highlight link sy_keyword Keyword
 highlight link sy_mut StorageClass
 highlight link sy_control_flow Conditional
 
-
 let b:current_syntax="syncopy"
-

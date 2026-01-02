@@ -3,13 +3,13 @@ All configs are managed through [GNU Stow][stow].
 ## Automated setup
 Run (which may invoke `sudo`):
 ```bash
-<neptune, correlia>.sh
+<neptune, corellia>.sh
 ```
 
 ## Manual Setup
 For user-level configs, run:
 ```bash
-stow -t ~ --restow <cli, neptune, correlia>
+stow -t ~ --restow <cli, neptune, corellia>
 ```
 
 Optionally, for root configs, run (as root):

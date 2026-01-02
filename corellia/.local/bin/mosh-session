@@ -1,2 +1,11 @@
-#!/bin/bash
-krenew -t -- tmux new-session -A -D -s 0
+#!/usr/bin/perl -w
+use strict;
+
+my $shell = exists $ENV{ 'SHELL' } ? $ENV{ 'SHELL' } : (getpwuid( $> ))[ 8 ];
+
+$ENV{'TERM'} = 'xterm-256color';  # force 256-color TERM
+delete $ENV{'COLORTERM'};         # clear any “truecolor” flags
+
+system $shell "-$shell";
+
+system 'kdestroy';

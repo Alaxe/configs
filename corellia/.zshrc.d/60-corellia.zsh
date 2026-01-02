@@ -7,6 +7,10 @@ source /afs/csail.mit.edu/system/common/etc/zsh/zprofile.csail
 #source /data/sanchez/tools/qmn/22.04/minispec/paths-vagrant.sh
 #source /data/sanchez/tools/yifany/minispec/paths.sh
 
+tmux() {
+    krenew -t -- tmux $@
+}
+
 export PATH="/afs/csail.mit.edu/u/a/alexalex/.local/bin:$PATH"
 export GOPATH="/data/scratch/alexalex/.go"
 export GOCACHE="/data/scratch/alexalex/.cache/go"
@@ -14,3 +18,4 @@ export GOCACHE="/data/scratch/alexalex/.cache/go"
 export SCONSFLAGS="-j32 $SCONSFLAGS"
 
 source /data/sanchez/tools/alexalex/dev/env.sh
+

@@ -9,3 +9,7 @@
 	defaultBranch = main
 [pull]
 	ff = only
+[safe]
+	directory = /afs/csail.mit.edu/u/s/sanchez/git/xrt_rvcore.git
+	directory = /data/sanchez/tools/minispec
+	directory = /afs/csail.mit.edu/u/s/sanchez/git/xrt_rvcore.git/
