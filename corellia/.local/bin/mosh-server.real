@@ -1,2 +1,3 @@
 #!/bin/bash
-mosh-server $@
+#/data/sanchez/tools/alexalex/dev/bin/mosh-server $@
+/data/sanchez/tools/alexalex/dev/local/bin/mosh-server $@
