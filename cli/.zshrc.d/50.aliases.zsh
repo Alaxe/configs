@@ -9,6 +9,7 @@ alias rm="rm -i"
 alias df='df -h'           # human-readable sizes
 alias free='free -m'       # show sizes in MB
 alias sudo='sudo '       # so that aliases still work
+alias wget='wget --no-hsts'
 
 alias vim=nvim
 

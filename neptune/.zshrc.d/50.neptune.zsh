@@ -4,6 +4,7 @@ export CUPS_USER=alexalex
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 export SCONSFLAGS="-j20 $SCONSFLAGS"
 
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export BLUESPECDIR="$HOME/.local/lib/bsc-2025.01.1"
 export PATH="$BLUESPECDIR/bin:$PATH"

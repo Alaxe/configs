@@ -1,3 +1,3 @@
 #!/bin/bash
 #/data/sanchez/tools/alexalex/dev/bin/mosh-server $@
-/data/sanchez/tools/alexalex/dev/local/bin/mosh-server $@
+/data/sanchez/users/alexalex/.local/bin/mosh-server $@

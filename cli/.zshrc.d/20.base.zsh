@@ -26,7 +26,6 @@ PS1='%B%F{10}[%m%F{white} %2~%F{10}]$%f%b '
 #PS1='%B%F{red}[%m%F{14} %2~%F{red}]#%f%b '
 
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
 export SCONSFLAGS="--random $SCONSFLAGS"
 
 precmd () { print -Pn "\e]0;[%M %2~]\a" }
