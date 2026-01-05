@@ -48,7 +48,7 @@ zinit() {
 zssh() {
     zinit;
     #ssh $1.csail.mit.edu ${@:2}
-    mosh --server="~/.local/bin/mosh-server-kerberos" $1.csail.mit.edu ${@:2}
+    mosh --server="~/.local/bin/mosh-server.kerberos" $1.csail.mit.edu ${@:2}
 }
 
 zpush() {

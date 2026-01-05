@@ -1,5 +1,5 @@
 #!/bin/bash
-stow -t ~ -R cli neptune
+stow -t ~ -R cli ssh neptune
 
 sudo chmod a+x ~
 sudo chown root:root neptune-root -R
