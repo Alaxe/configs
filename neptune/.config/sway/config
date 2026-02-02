@@ -96,17 +96,18 @@ exec nm-applet
 exec mako
 exec blueman-applet
 exec protonvpn-app
+exec protonmail-bridge
 
 ### Key bindings
 #
 # Basics:
 #
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    floating_modifier $mod normal
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
 
 bindsym --to-code {
     # Start a terminal
@@ -156,19 +157,19 @@ bindsym --to-code {
 #
 # Workspaces:
 #
-    set $ws1 1
-    set $ws2 2
-    set $ws3 3
-    set $ws4 4
-    set $ws5 5
-    set $ws6 6
-    set $ws7 7
-    set $ws8 8
-    set $ws9 9
-    set $ws10 0
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 0
 
-    # Starting workspace
-    workspace $ws2
+# Starting workspace
+workspace $ws2
 
 bindsym --to-code {
     # Switch to workspace
