@@ -172,7 +172,7 @@ tradeoffs
 undecryptable
 undercounting
 unmark
-usecases
+#secases
 variadic
 while
 CMU
@@ -285,3 +285,17 @@ SCCs
 Warshall
 Warshall's
 Purdom's
+expressivity
+unpipelined
+HDL
+HDLs
+BBQ's
+microarchitectural
+usecases/!
+stallable
+abortable
+prefills
+retiming
+deasserting
+Bluespec
+mispredicting
