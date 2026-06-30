@@ -127,6 +127,7 @@ local function buildCurrent()
         python = "python %",
         sh = "bash %",
         tex = "pdflatex -interaction=nonstopmode -halt-on-error %",
+        typst = "typst compile %",
     }
 
 
