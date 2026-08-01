@@ -8,3 +8,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export BLUESPECDIR="$HOME/.local/lib/bsc-2025.01.1"
 export PATH="$BLUESPECDIR/bin:$PATH"
+
+export DOCKER_HOST=unix:///run/user/$UID/docker.sock
