@@ -24,8 +24,9 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 export SCONSFLAGS="--random $SCONSFLAGS"
 
-setopt prompt_subst
+export DOCKER_HOST=unix:///run/user/$UID/docker.sock
 
+setopt prompt_subst
 CLONE_SLOTS=(alderaan bespin coruscant dagobah)
 
 clone_tag() {
