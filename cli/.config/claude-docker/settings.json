@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "defaultMode": "plan"
+  },
+  "model": "fable",
+  "effortLevel": "high",
+  "promptSuggestionEnabled": false,
+  "awaySummaryEnabled": false,
+  "autoUpdatesChannel": "stable",
+  "theme": "auto",
+  "editorMode": "vim",
+  "preferredNotifChannel": "terminal_bell",
+  "remoteControlAtStartup": false,
+  "tui": "fullscreen",
+  "spinnerTipsEnabled": false,
+  "prefersReducedMotion": true
+}

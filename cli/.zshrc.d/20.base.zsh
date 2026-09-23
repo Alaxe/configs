@@ -48,3 +48,5 @@ precmd()  { print -Pn "\e]0;[%M %2~]\a" }
 preexec() { print -Pn "\e]0;[%M %2~] ${1//\%/%%}\a" }
 
 PS1='%B%F{10}[%m %F{13}${CLONE_TAG}%F{white}%2~%F{10}]$%f%b '
+
+export CLAUDE_DOCKER_SETTINGS="~/.config/claude-docker/settings.json"
