@@ -27,7 +27,7 @@ export SCONSFLAGS="--random $SCONSFLAGS"
 export DOCKER_HOST=unix:///run/user/$UID/docker.sock
 
 setopt prompt_subst
-CLONE_SLOTS=(alderaan bespin coruscant dagobah)
+CLONE_SLOTS=(alderaan bespin coruscant dagobah endor ferrix geonosis hoth)
 
 clone_tag() {
   local p

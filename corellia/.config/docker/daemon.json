@@ -1,0 +1,4 @@
+{
+    "data-root": "/scratch/alexalex/.docker",
+    "storage-driver": "fuse-overlayfs"
+}
