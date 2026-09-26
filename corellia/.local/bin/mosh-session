@@ -6,6 +6,7 @@ my $shell = exists $ENV{ 'SHELL' } ? $ENV{ 'SHELL' } : (getpwuid( $> ))[ 8 ];
 $ENV{'TERM'} = 'xterm-256color';  # force 256-color TERM
 $ENV{'COLORTERM'} = 'truecolor';
 
+system "aklog";
 system $shell "-$shell";
 
 system 'kdestroy';

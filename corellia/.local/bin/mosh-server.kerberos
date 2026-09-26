@@ -67,7 +67,8 @@ sub finish {
 
     $ENV{ 'MOSH_SERVER_NETWORK_TMOUT' } = q{1209600}; # 14-day timeout per 2/15/2017 jweiss request
 
-    exec 'pagsh', '-c', 'aklog; exec "$@"', '--', $SERVER, @ARGV;
+    # exec 'pagsh', '-c', 'aklog; exec "$@"', '--', $SERVER, @ARGV;
+    exec $SERVER, @ARGV;
     die;
 }
 
