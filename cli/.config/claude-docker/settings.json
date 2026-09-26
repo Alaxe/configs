@@ -13,5 +13,6 @@
   "remoteControlAtStartup": false,
   "tui": "fullscreen",
   "spinnerTipsEnabled": false,
-  "prefersReducedMotion": true
+  "prefersReducedMotion": true,
+  "autoMemoryEnabled": false
 }
