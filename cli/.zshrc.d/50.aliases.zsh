@@ -1,4 +1,3 @@
-alias diff='diff --color'
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
@@ -55,3 +54,5 @@ zpush() {
     zinit;
     scp $1 z.csail.mit.edu:~/public_html/private/$2
 }
+
+diff() { command diff --color=always "$@" | less -RFX; }
