@@ -2,7 +2,7 @@
   "permissions": {
     "defaultMode": "plan"
   },
-  "model": "fable",
+  "model": "opus",
   "effortLevel": "high",
   "promptSuggestionEnabled": false,
   "awaySummaryEnabled": false,
