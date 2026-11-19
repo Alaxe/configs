@@ -1,4 +1,9 @@
 #!/bin/bash
-FLAGS="--transfers 32 --progress --fast-list --copy-links"
+FLAGS="--transfers 32 --progress --fast-list -l"
 /usr/bin/rclone sync google-drive: /home/alex/.google-drive $FLAGS
-/usr/bin/rclone sync /home/alex/.backup b2-neptune: $FLAGS
+
+for link in /home/alex/.backup/*; do
+    dir_name=$(basename $link)
+    dir_path=$(readlink -f $link)
+    /usr/bin/rclone sync ${dir_path} b2-neptune:${dir_name} $FLAGS
+done
