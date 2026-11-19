@@ -95,7 +95,7 @@ input "4176:1031:Yubico_YubiKey_OTP+FIDO+CCID" {
 exec nm-applet
 exec mako
 exec blueman-applet
-exec protonvpn-app
+exec nm-online -q -t 30 && protonvpn connect --city Boston
 exec protonmail-bridge
 
 ### Key bindings
